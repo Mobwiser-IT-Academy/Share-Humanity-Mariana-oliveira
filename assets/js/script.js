@@ -1,34 +1,16 @@
-const NAV = document.querySelector(".nav");
-var x = window.matchMedia("(max-width: 1000px)");
+const NAV_LINK = document.querySelectorAll(".nav__link");
 
+// Change active nav link
+function changeLinkActive(elem){
+	
+	//Remove class active from active link
+	for(var i =0; i < NAV_LINK.length; i++) {
 
-//Change the carousel pictures number
-function changeSlider(x){
-	if(x.matches) {//If media query matches
-		new Glide(".glide", {
-			type: "carousel",
-			startAt: 0,
-			perView: 1,
-			focusAt: "center",
-		}).mount();
-	} else{
-		new Glide(".glide", {
-			type: "carousel",
-			startAt: 0,
-			perView: 3,
-			focusAt: "center",
-		}).mount();
+		NAV_LINK[i].classList.remove("nav__link--active");
+			
 	}
+
+	//Add class active to current link
+	elem.classList.add("nav__link--active");
+
 }
-
-changeSlider(x); //Call listener function ate runtime
-x.addListener(changeSlider); //Attach listener function on state changes
-
-
-
-// Toggle Header Menu
-function toggleMenu(e){
-	NAV.classList.toggle("hide-mobile");
-	e.preventDefault();
-}
-

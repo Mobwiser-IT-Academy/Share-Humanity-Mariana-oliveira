@@ -1,0 +1,13 @@
+@mixin hoverEffect {
+    &:hover {
+        transform: scale(1.05);
+        color: $color-primary-light;
+    }
+
+    &:focus {
+        outline: none;
+        color: $color-primary-light;
+        border-bottom: 2px solid $color-primary-light;
+        transform: scale(1.05);
+    }
+}

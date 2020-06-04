@@ -1,0 +1,163 @@
+.footer {
+    
+    margin-left: -$body-padding;
+    margin-right: -$body-padding;
+    padding: 5rem 0;
+    color: $color-grey-light-1;
+
+
+    background-image: url(../images/background/dark-wood.jpg);
+    font-size: 1.4rem;
+
+    &__container {
+        max-width: 120rem;
+        width: 80%;
+        margin: 0 auto;
+
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        justify-content: center;
+        align-items: flex-start;
+
+        margin-bottom: 3rem;
+    }   
+
+    &__title {
+        color: $color-primary-light;
+        text-transform: uppercase;
+
+        font-weight: 700;
+
+        margin-bottom: 1.2rem;
+    }
+
+
+    // CONTACT US and JOIN US CONTAINERS
+    &__contact, &__join-us {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+       
+    }
+
+    // CONTACT US
+
+    &__email {
+        margin-bottom: 1.2rem;
+        color: currentColor;
+
+        &:hover {
+            color:  rgba($color-grey-dark-1, .8);
+        }
+
+    }
+
+    &__icon-link {
+        &:link,
+        &:visited{
+            text-decoration: none;
+        }
+        
+        &:not(:last-of-type) {
+            margin-right: .5rem;
+        }
+    }
+
+    &__icon {
+        height: 3rem;
+        width: 3rem;
+        fill: $color-grey-dark-1;
+
+        @include hoverEffect;
+
+        &:hover {
+            fill: $color-primary-light;
+        }
+    }
+
+    // LOGO
+    &__logo-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 15rem;
+    }
+
+
+    //JOIN US
+    &__form {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__email-input {
+        width: 100%;
+        padding: .7rem 1rem;
+        border: none;
+        font-family: inherit;
+        font-size: inherit;
+        background-color: $color-grey-light-2;
+        color: $color-grey-dark-3;
+
+
+        &:focus{
+            outline: none;
+            box-shadow:  0 1rem 2rem rgba($color-black, .1);
+            border-bottom: 3px solid $color-primary;
+        }
+
+        &:focus:invalid{
+            border-bottom: 3px solid $color-secondary-dark;
+        }
+    }
+
+    &__email-label {
+        display: block;
+        align-self: flex-start;
+        font-size: 1.2rem;
+        margin-left: .7rem;
+        margin-top: .5rem;
+        margin-bottom: 1.5rem;
+        transition: all .3s;
+    }
+
+    &__email-input:placeholder-shown + &__email-label{
+        opacity: 0;
+        visibility: hidden;
+        margin-bottom: -1rem;
+        transform: translateY(-3rem);
+    }
+
+    // NAVIGATION 
+    &__nav{
+        max-width: 120rem;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+
+    &__link {
+        &:link,
+        &:visited{
+            text-decoration: none;
+            color: currentColor;
+            display: inline-block;
+            transition: all .2s;
+        }
+
+        @include hoverEffect;
+        
+    }
+}

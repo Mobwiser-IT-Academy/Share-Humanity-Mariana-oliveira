@@ -1,0 +1,60 @@
+.btn {
+
+    &,
+    &:link,
+    &:visited {
+        display: inline-block;
+        border: none;
+        border-radius: 10rem;
+        background-color: $color-primary-light;
+        color: $color-white;
+        transition: all .2s;
+    
+        font-weight: 300;
+        text-transform: uppercase;
+        text-decoration: none;
+
+        //Change for the <button> element
+        border: none;
+        cursor: pointer;
+    }
+
+
+    &:hover {
+        transform: translateY(-.2rem);
+        box-shadow: $shadow-light-big;
+    }
+
+    &:active,
+    &:focus {
+        outline: none;
+        transform: translateY(-.1rem);
+        box-shadow: $shadow-light-small;
+    }
+
+
+    &--animated{
+        animation: moveInBottom .5s ease-out 0.75s;   //the last one is animation delay
+        animation-fill-mode: backwards; //applies the styles of 0% before the animation starts
+    }
+
+   &--small{
+        padding: 1rem 1.5rem;
+
+        font-size: 1.4rem;
+
+   }
+
+   &--small-larger {
+        padding: 1rem 3rem;
+
+        font-size: 1.4rem;
+
+   }
+
+   &--big {
+    padding: 1.5rem 3rem;
+    
+    font-size: 2rem;
+   }
+}

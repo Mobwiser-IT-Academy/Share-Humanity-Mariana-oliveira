@@ -1,0 +1,17 @@
+.section-intro {
+    padding-top: 15rem;
+    height: calc(100vh - 15rem);
+
+    background-image: linear-gradient(to right bottom, rgba($color-white, 0.3), rgba($color-white, 0.3)), url(../images/background/zeyn-afuang-9xp0AWvlGC4-unsplash-1920.jpg);
+    background-size: cover;
+    background-position: center;
+    width: calc(100vw - 2.5 *  var(--body-padding));
+}
+
+
+.section-issue {
+    max-width: 120rem;
+    width: 80%;
+    margin: 0 auto;
+
+}

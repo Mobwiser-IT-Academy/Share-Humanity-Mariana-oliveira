@@ -4,121 +4,191 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Share Humanity</title>
-    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
     <link rel="shortcut icon" href="assets/images/icon.svg"/>
-    <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans&family=Montserrat&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> 
+    
 </head>
 <body>
     
-    <header>
-
-        <img src="assets/images/logo.svg" class="logo" alt="Logo"> 
-
-        <nav>
-            <a class="btn-menu hide-desktop" href="#" aria-label="toggle menu" onclick="toggleMenu()"><i class="fas fa-bars"></i></a>
-
-            <ul class="nav show-desktop hide-mobile">
-
-                <li id="exit" class="exit-btn hide-desktop" onclick="toggleMenu()"><i class="fas fa-times"></i></li>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Humanitarian Issues</a></li>
-                <li><a href="#">About</a></li>
-            </ul>
-        </nav>
-
+    <header class="header">
+        <div class="header__container">
+            <img src="assets/images/logo.svg" alt="Share Humanity Logo" class="header__logo">
+        </div>
+        
+        <div class="header__container">
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#" class="nav__link nav__link--active" onclick="changeLinkActive(this)">Home</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link" onclick="changeLinkActive(this)">Our Work</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link" onclick="changeLinkActive(this)">About Us</a></li>
+                    <li class="nav__item"><a href="#" class="nav__link" onclick="changeLinkActive(this)">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__container">
+            <form action="#"  class="search">
+                <input type="text" class="search__input" placeholder="Search">
+                <button class="search__btn">
+                    <svg class="search__icon">
+                        <use xlink:href="assets/images/sprite.svg#icon-search"></use>
+                    </svg>
+                </button>
+            </form>
+        </div>
     </header>
-    
 
-    <section>
-        <h1>Humanitarian Issues</h1>
-        
-        <article class="article-issue"><!-- Poverty-->
-            <img src="assets/images/poverty/patrick-hendry-LL9wzvCI2gw-unsplash.jpg" alt="A clearly needy elderly person">
-            <h2 class="issue-title">Poverty</h2>
-            <div class="issue-info">
-                <p>People Affected: 700 M</p>
-                <p>Priority Rank: 1</p>
-                <a href="#">See More</a>
+    <main>
+        <section class="section-intro u-margin-bottom-big">
+            <div class="intro">
+                <div class="intro__text-box u-margin-bottom-big">
+                    <h1 class="intro__title">All Human life Matters</h1>
+                    <h2 class="intro__subtitle">Share Humanity<br>Change their lives</h2>
+                </div>
+                <a href="#" class="btn btn--big btn--animated">Know how to help</a>
             </div>
+        </section>
 
-        </article>
+        <section class="section-issue u-margin-bottom-big">
+            <h1 class="heading-1 u-margin-bottom-medium">Humanitarian Issues</h1>
+
+            <div class="issues">
+                <!-- Poverty-->
+                <div class="issue">
+                    <h3 class="issue__title">Poverty</h3>
+                    <img src="assets/images/poverty/patrick-hendry-LL9wzvCI2gw-unsplash-1920.jpg" alt="A clearly needy elderly person" class="issue__img">
+                    <div class="issue__info">
+                        <p class="issue__people">People Affected: 700 M</p>
+                        <p class="issue__priority">Priority Rank: 1</p>
+                        <a href="#" class="btn btn--small">See More</a>
+                    </div>
+                </div>
+
+
+                <!-- Hunger-->
+                <div class="issue">
+                    <h3 class="issue__title">Hunger</h3>
+                    <img src="assets/images/hunger/muhammad-muzamil-7S9x9US26Ow-unsplash-1920.jpg" alt="Little boy with an empty pan" class="issue__img">
+                    <div class="issue__info">
+                        <p class="issue__people">People Affected: 820 M</p>
+                        <p class="issue__priority">Priority Rank: 2</p>
+                        <a href="#" class="btn btn--small">See More</a>
+                    </div>
+                </div>
+
+                <!-- Health-->
+                <div class="issue">
+                    <h3 class="issue__title">Health</h3>
+                    <img src="assets/images/health/tedward-quinn-qN5ZqBoIWKo-unsplash-1920.jpg" alt="A person using protective equipment to disinfect the space" class="issue__img">
+                    <div class="issue__info">
+                        <p class="issue__people">People Affected: 820 M</p>
+                        <p class="issue__priority">Priority Rank: 3</p>
+                        <a href="#" class="btn btn--small">See More</a>
+                    </div>
+                </div>
+
+                <!-- Education-->
+                <div class="issue">
+                    <h3 class="issue__title">Education</h3>
+                    <img src="assets/images/education/nate-greno-p6Fu1MuBOdg-unsplash-1920.jpg" alt="Little boy hugging a book" class="issue__img">
+                    <div class="issue__info">
+                        <p class="issue__people">People Affected: 260 M</p>
+                        <p class="issue__priority">Priority Rank: 4</p>
+                        <a href="#" class="btn btn--small">See More</a>
+                    </div>
+                </div>
+                        
+                <!-- Water and Sanitation-->
+                <div class="issue">
+                    <h3 class="issue__title">Water and Sanitation</h3>
+                    <img src="assets/images/water-sanitaion/ivan-bandura-6wSevhW1Dzc-unsplash-1920.jpg" alt="Effluent treatment plant" class="issue__img">
+                    <div class="issue__info">
+                        <p class="issue__people">People Affected: 2000 M</p>
+                        <p class="issue__priority">Priority Rank: 6</p>
+                        <a href="#" class="btn btn--small">See More</a>
+                    </div>
+                </div>
+
+                <!-- Climate Change-->
+                <div class="issue">
+                    <h3 class="issue__title">Climate Change</h3>
+                    <img src="assets/images/climate-change/annie-spratt-d8FjB1_8xHQ-unsplash-1920.jpg" alt="Melting glaciers" class="issue__img">
+                    <div class="issue__info">
+                        <p class="issue__people">People Affected: Everyone</p>
+                        <p class="issue__priority">Priority Rank: 7</p>
+                        <a href="#" class="btn btn--small">See More</a>
+                    </div>
+                </div>
+
+            </div>
        
-        <article class="article-issue"><!-- Hunger-->
-            <img src="assets/images/hunger/muhammad-muzamil-7S9x9US26Ow-unsplash.jpg" alt="Little boy with an empty pan">
-            <h2 class="issue-title">Hunger</h2>
-            <div class="issue-info">
-                <p>People Affected: 820 M</p>
-                <p>Priority Rank: 2</p>
-                <a href="#">See More</a>
-            </div>
-        </article>
+        </section>
         
-        <article class="article-issue"><!-- Health-->
-            <img src="assets/images/health/tedward-quinn-qN5ZqBoIWKo-unsplash(1).jpg" alt="A person using protective equipment to disinfect the space">
-            <h2 class="issue-title">Health</h2>
-            <div class="issue-info">
-                <p>People Affected: 820 M</p>
-                <p>Priority Rank: 3</p>
-                <a href="#">See More</a>
-            </div>
-        </article>
+    </main>
 
-        <article class="article-issue"><!-- Education-->
-            <img src="assets/images/education/nate-greno-p6Fu1MuBOdg-unsplash.jpg" alt="Little boy hugging a book">
-            <h2 class="issue-title">Education</h2>
-            <div class="issue-info">
-                <p>People Affected: 260 M</p>
-                <p>Priority Rank: 4</p>
-                <a href="#">See More</a>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__contact">
+                <h2 class="footer__title">Contact Us</h2>
+                <a href="mailto:info@sharehumanity.com" class="footer__email">info@sharehumanity.com</a>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/" class="footer__icon-link" target="_blank">
+                        <svg class="footer__icon">
+                            <use xlink:href="assets/images/sprite.svg#icon-facebook2"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer__icon-link" target="_blank">
+                        <svg class="footer__icon">
+                            <use xlink:href="assets/images/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" class="footer__icon-link" target="_blank">
+                        <svg class="footer__icon">
+                            <use xlink:href="assets/images/sprite.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </div>
             </div>
-        </article>
-
-        <article class="article-issue"><!-- Gender Equality-->
-            <img src="assets/images/gender-equality/mana5280-wuxb0tFFWlU-unsplash.jpg" alt="A draw of a woman and the words Power & Equallity">
-            <h2 class="issue-title">Gender Equality</h2>
-            <div class="issue-info">
-                <p>People Affected: 1 in 5 women</p>
-                <p>Priority Rank: 5</p>
-                <a href="#">See More</a>
-            </div>
-        </article>
     
-        <article class="article-issue"><!-- Water and Sanitation-->
-            <img src="assets/images/water-sanitaion/ivan-bandura-6wSevhW1Dzc-unsplash.jpg" alt="Effluent treatment plant">
-            <h2 class="issue-title">Water and Sanitation</h2>
-            <div class="issue-info">
-                <p>People Affected: 2000 M</p>
-                <p>Priority Rank: 6</p>
-                <a href="#">See More</a>
+            <div class="footer__logo-box">
+                <img src="assets/images/logo-white.svg" alt="Share Humanity Logo" class="footer__logo">
             </div>
-        </article>
-       
-        <article class="article-issue"><!-- Climate Change-->
-            <img src="assets/images/climate-change/annie-spratt-d8FjB1_8xHQ-unsplash.jpg" alt="Melting glaciers">
-            <h2 class="issue-title">Climate Change</h2>
-            <div class="issue-info">
-                <p>People Affected: Everyone</p>
-                <p>Priority Rank: 7</p>
-                <a href="#">See More</a>
+    
+    
+            <div class="footer__join-us">
+                <h2 class="footer__title">Join Us</h2>
+                <form action="#" class="footer__form">
+                    <input type="email" class="footer__email-input" id="footer-email" required placeholder="Your Email...">
+                    <label for="footer-email" class="footer__email-label">Your Email...</label>
+                    <button class="btn btn--small-larger">Join Us</button>
+                </form>
+                
             </div>
-        </article>
+
+        </div>
 
 
-    </section>
-
-
-    <footer>
+        <div class="footer__nav">
+            <ul class="footer__list">
+                <li class="footer__item">
+                    &copy; 2020 Share Humanity 
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Work with Us</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Privacy Police</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Terms of Use</a>
+                </li>
+            </ul>
+        </div>
 
     </footer>
 
-    
     <script src="assets/js/script.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
-
 
 </body>
 </html>
