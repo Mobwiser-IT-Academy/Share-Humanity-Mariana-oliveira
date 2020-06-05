@@ -9,6 +9,13 @@
     background-image: url(../images/background/dark-wood.jpg);
     font-size: 1.4rem;
 
+    @include responsive(tab-port){
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+
+
     &__container {
         max-width: 120rem;
         width: 80%;
@@ -16,10 +23,22 @@
 
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        grid-column-gap: 2rem;
         justify-content: center;
         align-items: flex-start;
 
         margin-bottom: 3rem;
+
+        @include responsive(tab-port) {
+            width: 90%;
+            grid-column-gap: 1.5rem;
+        }
+
+        @include responsive(phone) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 5rem;
+        }
+
     }   
 
     &__title {
@@ -38,7 +57,6 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
-
        
     }
 
@@ -75,6 +93,10 @@
         &:hover {
             fill: $color-primary-light;
         }
+
+        @media only screen and (hover:none){
+            fill: $color-primary-light;
+        }
     }
 
     // LOGO
@@ -82,10 +104,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @include responsive(phone) {
+            order: -1;
+        }
     }
 
     &__logo {
-        width: 15rem;
+        width: 15rem;        
     }
 
 
@@ -95,6 +121,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @include responsive(phone) {
+            margin-bottom: 5rem;
+        }
     }
 
     &__email-input {
@@ -135,18 +165,50 @@
         transform: translateY(-3rem);
     }
 
+
+
+
     // NAVIGATION 
     &__nav{
+        display: flex;
         max-width: 120rem;
         width: 80%;
         margin: 0 auto;
+
+        @include responsive(phone) {
+            flex-direction: column;
+            align-items: stretch;
+            justify-content: center;
+        }
+    }
+
+    &__copy {
+        width: max-content;
+
+        @include responsive(phone) {
+            align-self: center;
+            margin-bottom: 2rem;
+        }
     }
 
     &__list {
+        flex: 1;       
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-evenly;
+
+        @include responsive(phone) {
+           
+        }
     }
 
+    &__item {
+        @include responsive(phone) {
+            &:not(:last-of-type) {
+                margin-right: 2rem;
+            }
+        }
+    }
 
     &__link {
         &:link,

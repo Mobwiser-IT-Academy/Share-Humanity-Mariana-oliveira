@@ -1,7 +1,8 @@
 .issues {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-    grid-gap: 5rem;
+    grid-row-gap: 5rem;
+    grid-column-gap: 2rem;
 
  
 }
@@ -36,12 +37,17 @@
         text-transform: uppercase;
 
         margin-bottom: 1.5rem;
+
+        @include responsive(tab-land) {
+            font-size: 1.8rem;
+        }
     }
 
     &__img {
         width: 80%;
         transition: all .2s;
         box-shadow: $shadow-light-big;
+
     }
 
     &__info {
@@ -51,6 +57,20 @@
 
         font-size: 1.6rem;
         font-weight: 700;
+
+
+        @media only screen and (hover: none) {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+
+            position: relative;
+            top: 2rem;
+            margin-bottom: 2rem;
+
+        }
     }
 
     &__people, &__priority {

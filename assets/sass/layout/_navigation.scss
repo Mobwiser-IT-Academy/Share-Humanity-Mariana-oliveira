@@ -7,7 +7,39 @@
         justify-content:center;
         align-items: center;
         margin: 0 auto;
+
+
+
+        //Functionality for smaller screens (<900px)
+        @include responsive(tab-port) {
+            display: none;
+
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-start;
+
+            position: fixed;
+            top: 10.2rem;
+            left: 0;
+            height: 100%;
+            width: 50%;
+            z-index: 1000;
+            transition: all 1s;
+
+            background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark) ;
+
+            animation-name: moveInLeftMenu;
+            animation-duration: .8s;
+            animation-timing-function: ease-out;
+        }
+
+        @include responsive(phone) {
+            width: 75%;
+        }
+
+
     }
+
 
     &__item {
         text-align: center;
@@ -15,6 +47,15 @@
         &:not(:last-of-type) {
             margin-right: 1.8rem;
         }
+
+        @include responsive(tab-port) {
+            padding-top: 5rem;
+            padding-left: 2rem;
+            margin-left: 3rem;
+
+        }
+
+
     }
 
     &__link {
@@ -26,16 +67,115 @@
             display: inline-block;
             height: 100%;
             transition: all .2s;
+
+
+            @include responsive(tab-port) {
+                color: $color-white;
+                font-size: 1.8rem;
+            }
         }
         
         @include hoverEffect;
+
+        //Remove hover and focus effect from hoverEffect mixin
+        &:hover, &:focus {
+            @include responsive(tab-port) {
+                color: $color-white;
+            }
+        }
+
+       
+        &:focus {
+            @include responsive(tab-port) {
+                border-bottom: 2px solid $color-white;
+            }
+        }
+
 
         &--active{
             color: $color-primary-light;
             border-bottom: 2px solid $color-primary-light;
             transform: scale(1.05);
+
+            @include responsive(tab-port) {
+                color: $color-white;
+                border-bottom: 2px solid $color-white;
+            }
         }
       
     }
+
+
+    //For smaller screens (<900px)
+
+    &__back-button {
+        display: none;
+
+        @include responsive(tab-port) {
+        position: fixed;
+            top: 10rem;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 999;
+            background-color: rgba($color-black, 0.4);
+            transition: all .1s;
+        }
+    }
+
+    &__toggle {
+        visibility: hidden;
+        position: absolute;
+        top: 3rem;
+        left: 5rem;
+        
+
+        @include responsive(tab-port) {
+            visibility: visible;
+            opacity: 0;
+        }
+
+        @include responsive(tab-port) {
+            left: 3rem;
+        }
+    }
+
+    &__toggle:checked ~ &__list {
+        display: flex;
+        z-index: 1000;
+    }
+
+    &__toggle:checked ~ &__back-button {
+        display: block;
+        z-index: 999;
+    }
+
+
+    &__toggle-button {
+        position: absolute;
+        top: 3rem;
+        left: 5rem;
+        visibility: hidden;
+        width: min-content;   
+        
+        
+        @include responsive(tab-port) {
+            visibility: visible;
+        }
+
+        @include responsive(tab-port) {
+            left: 3rem;
+        }
+
+    }
+
+    &__toggle-icon {
+        height: 4rem;
+        width: 4rem;
+        fill: $color-primary-light;
+    
+    }
+
+
 }
     

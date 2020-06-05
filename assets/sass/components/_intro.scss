@@ -8,9 +8,18 @@
     align-items: center;
     color: $color-white;
 
+    @include responsive(extra-bp) {
+        width: 90%;
+    }
+
     &__text-box {
         display: flex;
-        align-items: center;
+        align-items: center;   
+        
+        @include responsive(tab-port) {
+            flex-direction: column;
+            justify-content: center;
+        }
     }
 
     &__title{
@@ -29,6 +38,19 @@
         animation-name: moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+
+        @include responsive(extra-bp) {
+            font-size: 5rem;
+        }
+
+        @include responsive(tab-land) {
+            font-size: 4rem;
+        }
+
+        @include responsive(tab-port) {
+            width: 100%; 
+            padding-right: 0;
+        }
     }
 
     &__subtitle {
@@ -48,5 +70,22 @@
         animation-name: moveInRight;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+
+
+        @include responsive(extra-bp) {
+            font-size: 4rem;
+        }
+
+
+        @include responsive(tab-land) {
+            font-size: 3rem;
+        }
+
+        @include responsive(tab-port) {
+            width: 100%; 
+            border-left: none;
+            padding-left: 0;
+            padding-top: 3rem;
+        }
     }
 }
