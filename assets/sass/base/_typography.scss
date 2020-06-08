@@ -28,10 +28,10 @@ body{
 
 
 .heading-3 {
-	font-size: 2rem;
+	font-size: 1.8rem;
 	font-weight: 700;
 	text-transform: uppercase;
-
+	text-align: center;
 	margin-bottom: 1.5rem;
 
 	@include responsive(tab-land) {
