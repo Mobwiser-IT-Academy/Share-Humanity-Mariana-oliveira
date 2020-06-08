@@ -28,12 +28,9 @@
         padding-right: 5rem;
         text-align: center;
         
-        font-size: 6rem;
-        font-weight: 400;
+        @include title;
         text-align: center;
-        text-transform: uppercase;
-        letter-spacing: .6rem;
-        word-spacing: .2rem;
+
 
         animation-name: moveInLeft;
         animation-duration: 1s;

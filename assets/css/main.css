@@ -105,6 +105,9 @@ body {
 .hide-mobile {
   display: none !important; }
 
+strong {
+  font-weight: 700; }
+
 body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
@@ -129,6 +132,33 @@ body {
   text-transform: uppercase;
   margin: 2rem 1rem; }
 
+.heading-3 {
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 1.5rem; }
+  @media only screen and (max-width: 75em) {
+    .heading-3 {
+      font-size: 1.8rem; } }
+
+.inline-link:link, .inline-link:visited {
+  text-decoration: none;
+  color: #379b00;
+  transition: all .2s; }
+
+.inline-link:hover {
+  transform: scale(1.05);
+  color: #62b100; }
+
+.inline-link:focus {
+  outline: none;
+  color: #62b100;
+  border-bottom: 2px solid #62b100;
+  transform: scale(1.05); }
+
+.u-margin-bottom-huge {
+  margin-bottom: 12rem !important; }
+
 .u-margin-bottom-big {
   margin-bottom: 8rem !important; }
 
@@ -148,6 +178,7 @@ body {
   font-weight: 300;
   text-transform: uppercase;
   text-decoration: none;
+  text-align: center;
   border: none;
   cursor: pointer; }
 
@@ -176,6 +207,24 @@ body {
   padding: 1.5rem 3rem;
   font-size: 2rem; }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 0;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  transition: all .2s; }
+  .card__img {
+    width: 100%; }
+  .card__content {
+    width: 90%;
+    min-height: 25rem;
+    height: auto;
+    margin: 0 auto; }
+  .card:hover {
+    transform: scale(1.05); }
+
 .intro {
   height: 90%;
   width: 70%;
@@ -201,10 +250,10 @@ body {
     text-align: center;
     font-size: 6rem;
     font-weight: 400;
-    text-align: center;
     text-transform: uppercase;
     letter-spacing: .6rem;
     word-spacing: .2rem;
+    text-align: center;
     animation-name: moveInLeft;
     animation-duration: 1s;
     animation-timing-function: ease-out; }
@@ -269,14 +318,6 @@ body {
   .issue:hover > .issue__img {
     transform: scale(1.05);
     filter: opacity(0.3); }
-  .issue__title {
-    font-size: 2rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem; }
-    @media only screen and (max-width: 75em) {
-      .issue__title {
-        font-size: 1.8rem; } }
   .issue__img {
     width: 80%;
     transition: all .2s;
@@ -679,6 +720,97 @@ body {
     width: 4rem;
     fill: #62b100; }
 
+.section-detail-header {
+  padding-top: 15rem;
+  height: calc(100vh - 15rem);
+  width: calc(100vw - 2.5 *  var(--body-padding));
+  background-size: cover; }
+  @media only screen and (max-width: 75em) {
+    .section-detail-header {
+      height: 90%;
+      padding-top: 15rem;
+      padding-bottom: 15rem; } }
+  @media only screen and (max-width: 56.25em) {
+    .section-detail-header {
+      width: 100%; } }
+  .section-detail-header--poverty {
+    background-image: linear-gradient(250deg, rgba(247, 247, 247, 0.5) 50%, rgba(247, 247, 247, 0.7) 60%, #f7f7f7 100%), linear-gradient(to bottom, rgba(247, 247, 247, 0.2) 50%, rgba(247, 247, 247, 0.9) 100%), url(../images/poverty/ben-richardson-WV-NgeS9oRw-unsplash-1920.jpg);
+    background-position: center; }
+  .section-detail-header--hunger {
+    background-image: linear-gradient(250deg, rgba(247, 247, 247, 0.5) 50%, rgba(247, 247, 247, 0.7) 60%, #f7f7f7 100%), linear-gradient(to bottom, rgba(247, 247, 247, 0.2) 50%, rgba(247, 247, 247, 0.9) 100%), url(../images/hunger/timothy-barlin-_nFc2IRUHrM-unsplash-1920.jpg);
+    background-position: left; }
+
+.detail-header__text-box {
+  height: 90%;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .detail-header__text-box {
+      width: 90%; } }
+
+.detail-header__title {
+  font-size: 6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: .6rem;
+  word-spacing: .2rem;
+  width: 100%;
+  text-align: left;
+  color: #333; }
+  @media only screen and (max-width: 37.5em) {
+    .detail-header__title {
+      text-align: center; } }
+
+.detail-header__subtitle {
+  width: 100%;
+  font-size: 2rem;
+  font-weight: 400;
+  text-align: left;
+  letter-spacing: .6rem;
+  word-spacing: .2rem; }
+  @media only screen and (max-width: 37.5em) {
+    .detail-header__subtitle {
+      text-align: center; } }
+
+.section-facts, .section-areas, .section-events {
+  max-width: 120rem;
+  width: 80%;
+  margin: 0 auto; }
+  @media only screen and (max-width: 75em) {
+    .section-facts, .section-areas, .section-events {
+      width: 90%; } }
+
+.facts__list {
+  list-style: disc;
+  padding-left: 2rem; }
+
+.facts__item {
+  margin-bottom: 1rem; }
+
+.facts__info {
+  font-size: 1.4rem;
+  margin-top: 4rem;
+  text-align: right; }
+
+.areas__img {
+  display: block;
+  width: 100%; }
+
+.areas__caption {
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  text-align: right; }
+
+.events {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-row-gap: 5rem;
+  grid-column-gap: 5rem; }
+
 .section-intro {
   padding-top: 15rem;
   height: calc(100vh - 15rem);
@@ -702,6 +834,3 @@ body {
   @media only screen and (max-width: 75em) {
     .section-issue {
       width: 90%; } }
-  @media only screen and (max-width: 56.25em) {
-    .section-issue {
-      width: 95%; } }

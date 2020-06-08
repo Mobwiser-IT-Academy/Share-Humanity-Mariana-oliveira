@@ -13,6 +13,38 @@
 }
 
 
+@mixin sectionIntro {
+    padding-top: 15rem;
+    height: calc(100vh - 15rem);    
+    width: calc(100vw - 2.5 *  var(--body-padding));
+
+     @include responsive(tab-land) {
+        height: 90%; 
+        padding-top: 15rem;
+        padding-bottom: 15rem;
+    }
+
+    @include responsive(tab-port) {
+        width: 100%; 
+    }
+
+}
+
+@mixin title {
+    font-size: 6rem;
+    font-weight: 400;
+
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+    word-spacing: .2rem;
+}
+
+
+@mixin centerContainer {
+    max-width: 120rem;
+    width: 80%;
+    margin: 0 auto;
+}
 
 
 //MEDIA QUERY MANAGER

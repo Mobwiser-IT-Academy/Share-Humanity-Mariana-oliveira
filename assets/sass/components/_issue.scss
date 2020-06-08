@@ -3,7 +3,6 @@
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     grid-row-gap: 5rem;
     grid-column-gap: 2rem;
-
  
 }
 
@@ -29,18 +28,6 @@
     &:hover >  &__img{
        transform: scale(1.05);
        filter: opacity(0.3) ;
-    }
-
-    &__title {
-        font-size: 2rem;
-        font-weight: 700;
-        text-transform: uppercase;
-
-        margin-bottom: 1.5rem;
-
-        @include responsive(tab-land) {
-            font-size: 1.8rem;
-        }
     }
 
     &__img {

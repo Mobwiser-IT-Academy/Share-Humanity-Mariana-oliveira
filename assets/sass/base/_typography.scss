@@ -24,7 +24,28 @@ body{
 	text-align: center;
 	text-transform: uppercase;
 	margin: 2rem 1rem;
-
 }
 
 
+.heading-3 {
+	font-size: 2rem;
+	font-weight: 700;
+	text-transform: uppercase;
+
+	margin-bottom: 1.5rem;
+
+	@include responsive(tab-land) {
+		font-size: 1.8rem;
+	}	
+}
+
+
+.inline-link {
+	&:link, &:visited {
+		text-decoration: none;
+		color: $color-primary;
+		transition: all .2s;
+	}
+
+	@include hoverEffect;
+}

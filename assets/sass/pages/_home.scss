@@ -1,37 +1,19 @@
 .section-intro {
-    padding-top: 15rem;
-    height: calc(100vh - 15rem);    
-    width: calc(100vw - 2.5 *  var(--body-padding));
+
+    @include sectionIntro;
 
     background-image: linear-gradient(to right bottom, rgba($color-white, 0.3), rgba($color-white, 0.3)), url(../images/background/zeyn-afuang-9xp0AWvlGC4-unsplash-1920.jpg);
     background-size: cover;
     background-position: center;
 
-
-    @include responsive(tab-land) {
-        height: 90%; 
-        padding-top: 15rem;
-        padding-bottom: 15rem;
-    }
-
-    @include responsive(tab-port) {
-        width: 100%; 
-    }
-
 }
 
 
 .section-issue {
-    max-width: 120rem;
-    width: 80%;
-    margin: 0 auto;
+    @include centerContainer;
 
     @include responsive(tab-land) {
         width: 90%;
-    }
-
-    @include responsive(tab-port) {
-        width: 95%;
     }
 
 }
