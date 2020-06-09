@@ -21,8 +21,23 @@
     &--health {
         background-image: linear-gradient(250deg, rgba($color-grey-light-1, 0.5) 50%, rgba($color-grey-light-1, .7) 60%, rgba($color-grey-light-1, 1) 100%), 
         linear-gradient(to bottom, rgba($color-grey-light-1, 0.2) 50%, rgba($color-grey-light-1, .9) 100%),
-        url(../images/health/mladen-borisov-RzbUUaP2JXY-unsplash-1920.jpg);
-        background-position: left;
+        url(../images/education/bill-wegener-LqOO5Ko0zSo-unsplash-1920.jpg);
+        background-position: center;
+    }
+
+    &--water {
+        background-image: linear-gradient(250deg, rgba($color-grey-light-1, 0.5) 50%, rgba($color-grey-light-1, .7) 60%, rgba($color-grey-light-1, 1) 100%), 
+        linear-gradient(to bottom, rgba($color-grey-light-1, 0.2) 50%, rgba($color-grey-light-1, .9) 100%),
+        url(../images/water-sanitation/gallery-ds-X_tEarX6svc-unsplash-1920.jpg);
+        background-position: center;
+    }
+
+
+    &--climate {
+        background-image: linear-gradient(250deg, rgba($color-grey-light-1, 0.5) 50%, rgba($color-grey-light-1, .7) 60%, rgba($color-grey-light-1, 1) 100%), 
+        linear-gradient(to bottom, rgba($color-grey-light-1, 0.2) 50%, rgba($color-grey-light-1, .9) 100%),
+        url(../images/climate-change/yvette-zhang-g-tyziMh37o-unsplash-1920.jpg);
+        background-position: center;
     }
 
 

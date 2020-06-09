@@ -67,6 +67,7 @@
             display: inline-block;
             height: 100%;
             transition: all .2s;
+            color: inherit;
 
 
             @include responsive(tab-port) {
