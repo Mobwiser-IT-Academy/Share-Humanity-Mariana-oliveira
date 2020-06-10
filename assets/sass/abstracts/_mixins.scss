@@ -1,0 +1,94 @@
+@mixin hoverEffect {
+    &:hover {
+        transform: scale(1.05);
+        color: $color-primary-light;
+    }
+
+    &:focus {
+        outline: none;
+        color: $color-primary-light;
+        border-bottom: 2px solid $color-primary-light;
+        transform: scale(1.05);
+    }
+}
+
+
+@mixin sectionIntro {
+    padding-top: 15rem;
+    height: calc(100vh - 15rem);    
+    width: calc(100vw - 2.5 *  var(--body-padding));
+
+     @include responsive(tab-land) {
+        height: 90%; 
+        padding-top: 15rem;
+        padding-bottom: 15rem;
+    }
+
+    @include responsive(tab-port) {
+        width: 100%; 
+    }
+
+}
+
+@mixin title {
+    font-size: 6rem;
+    font-weight: 400;
+
+    text-transform: uppercase;
+    letter-spacing: .6rem;
+    word-spacing: .2rem;
+}
+
+
+@mixin centerContainer {
+    max-width: 120rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+//MEDIA QUERY MANAGER
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+1200 - 1600px:  Extra breakpoint
+1600 - 1800px:    Normal style applied
+1800px +:       Big desktops
+
+$breakpoint:
+- phone
+- tab-port
+- tab-land
+- extra-bp
+- big-desktop
+
+
+ORDER:
+
+Base    >   Typography  > General Layout    >   Page layout     >   Component
+
+
+*/
+
+@mixin responsive($breakpoint) {
+    @if $breakpoint == phone {
+        @media only screen and (max-width: 37.5em) { @content};  //600px
+    }
+
+    @if $breakpoint == tab-port {
+        @media only screen and (max-width: 56.25em) { @content}; //900px
+    }
+
+    @if $breakpoint == tab-land {
+        @media only screen and (max-width: 75em) { @content};    //1200px
+    }
+
+    @if $breakpoint == extra-bp {
+        @media only screen and (max-width: 100em) { @content};    //1200px
+    }
+
+    @if $breakpoint == big-desktop {
+        @media only screen and (min-width: 112.5em) { @content};     //1800px
+    }
+}

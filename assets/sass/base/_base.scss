@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%; // 1rem = 10px;  
+
+
+    @include responsive(tab-land) {
+        font-size: 56.25%;              //1rem = 9px
+    }
+
+    @include responsive(tab-port) {
+        font-size: 50%;                 //1rem = 8px
+    }
+
+    @include responsive(big-desktop) {
+        font-size: 75%;                    //1rem = 12px
+    }
+
+
+}
+
+
+body {
+    position: relative;
+    box-sizing: border-box;
+    padding: $body-padding;
+    padding-bottom: 0;
+
+    background-color: $color-grey-light-1;
+    color: $color-grey-dark-3;
+
+    @include responsive(tab-port) {
+        padding-left:  0;
+        padding-right: 0;
+    }
+
+}
+
+
+::selection {
+    background-color: $color-primary-light;
+    color: $color-white;
+}
+
+
+.hide-mobile {
+    display: none !important;
+}
+
+
+strong {
+    font-weight: 700;
+}

@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Humanity</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" href="assets/images/icon.svg"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> 
+    
+</head>
+<body>
+
+    
+     <!-- HEADER -->
+     <header class="header">
+        
+        <!-- Logo -->
+        <a href="index.html" class="header__logo-box">
+            <img src="assets/images/logo.svg" alt="Share Humanity Logo" class="header__logo">
+        </a>
+
+        <!-- Navigation -->
+        <nav class="nav">
+
+            <!-- Toggle Menu -->
+            <input type="checkbox" id="nav-toggle" class="nav__toggle"/>
+            <label for="nav-toggle" class="nav__toggle-button" onclick="changeIcon(this)">
+                <svg class="nav__toggle-icon">
+                    <use xlink:href="assets/images/sprite.svg#icon-menu"></use>
+                </svg>
+            </label>
+
+            <!-- Button to close menu above page -->
+            <button class="nav__back-button" onclick="closeMenu(); changeIcon(this)">&nbsp;</button>           
+
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link" onclick="changeLinkActive(this)">Home</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" onclick="changeLinkActive(this)">Our Work</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" onclick="changeLinkActive(this)">About Us</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" onclick="changeLinkActive(this)">Contact Us</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Search -->
+
+        <form action="#"  class="search">
+
+            <!-- Toggle Searchbox -->
+            <input type="checkbox" id="search-toggle" class="search__toggle"/>
+            <label for="search-toggle" class="search__toggle-button" onclick="changeIcon(this)">
+                <svg class="search__toggle-icon">
+                    <use xlink:href="assets/images/sprite.svg#icon-search"></use>
+                </svg>
+            </label>
+
+            <div class="search__input_box">
+                <input type="text" class="search__input" placeholder="Search">
+                <button class="search__btn">
+                    <svg class="search__icon">
+                        <use xlink:href="assets/images/sprite.svg#icon-search"></use>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+    <main class="full-container">
+        <header class="section-detail-header section-detail-header--hunger u-margin-bottom-big">
+            <div class="detail-header__text-box u-margin-bottom-big">
+                <h1 class="detail-header__title  u-margin-bottom-small">Hunger</h1>
+                <h2 class="detail-header__subtitle  u-margin-bottom-huge">Poor nutrition causes nearly half (45%) of deaths in children under five – 3.1 million children each year</h2>       
+                <a href="#section-events" class="btn btn--big btn--animated">Know how to help</a>
+            </div>     
+                     
+        </header>
+
+
+        <!-- FACTS -->
+        <section class="section-facts u-margin-bottom-big">
+            <h1 class="heading-1">Facts</h1>
+           
+                <ul class="facts__list">
+                    <li class="facts__item">More than <strong>821 million</strong> people are undernourished</li>
+                    <li class="facts__item">The majority of the world’s hungry people live in developing countries, where <strong>12.9% of the population is undernourished.</strong></li>
+                    <li class="facts__item"><strong>Sub-Saharan Africa</strong> is the region with the highest prevalence of hunger, where 237 people are undernourished.</li>
+                    <li class="facts__item"> <strong>149 million children</strong> under 5 years of age (22% of the global under-5 population) are <strong>chronically undernourished</strong></li>
+                    <li class="facts__item">Up to 80% of food consumed in a large part of the developing world is provided bu <strong>500 million small farms worldwide</strong></li>
+                </ul>
+            
+                <p class="facts__info">This info is provided by <a class="inline-link" href="https://www.un.org/sustainabledevelopment/poverty/" target="_blank">United Nations.</a></p>
+            </div>
+        
+        
+        </section>
+
+        
+        <!-- MOST AFFECTED AREAS -->
+        <section class="section-areas u-margin-bottom-big">
+
+            <h1 class="heading-1">Most affected areas</h1>
+            <p>Map presenting the percentage of population undernourished.</p>
+            <figure class="areas__map">
+                <a href="https://en.wikipedia.org/wiki/File:Percentage_population_undernourished_world_map_2009.svg#/media/File:Percentage_population_undernourished_world_map_2009.svg" target="_blank">
+                    <img class="areas__img" src="https://upload.wikimedia.org/wikipedia/en/thumb/c/cf/Percentage_population_undernourished_world_map_2009.svg/1200px-Percentage_population_undernourished_world_map_2009.svg.png" alt="Percentage population undernourished world map 2009.svg">
+                </a>
+
+                <figcaption class="areas__caption">
+                    By tony0106 - I (tony0106) created this work entirely by myself., <a href="https://creativecommons.org/licenses/by-sa/3.0/" target="_blank" class="inline-link" title="Creative Commons Attribution-ShareAlike 3.0">CC BY-SA 3.0</a>, <a href="https://en.wikipedia.org/w/index.php?curid=25532682" target="_blank" class="inline-link">Link</a>
+                </figcaption>
+
+            </figure>
+
+           
+        </section>
+
+
+        <!-- EVENTS -->
+        <section class="section-events u-margin-bottom-big" id="section-events">
+
+            <h1 class="heading-1">How to Help</h1>
+
+            <p class="u-margin-bottom-medium">Here you can find different entities and communities that you can join as volunteer to help on this fight against poverty.</p>
+
+            <div class="events">
+                <div class="card">
+                    <h3 class="card__title heading-3">Action against Hunger</h3>
+                    <img src="assets/images/hunger/evan-krause-InAu-8bM2ow-unsplash-1920.jpg" alt="Woman trying to get water" class="card__img u-margin-bottom-small">
+                    <div class="card__content u-margin-bottom-small">
+                        <p>Is an organization dedicated to save the lives of malnourished children. They ensure everyone can access clean water, food, training and healthcare.</p>
+                        <p>Action Against Hunger's teams work across nearly <strong>50 countries, to fight against hunger.</strong></p>
+                    </div>
+                    <a href="https://www.actionagainsthunger.org.uk/get-involved/volunteer/" target="_blank" class="btn btn--small-larger">Visit &rarr;</a>
+                </div>
+               
+                <div class="card">
+                    <h3 class="card__title heading-3">Rise Against Hunger</h3>
+                    <img src="assets/images/hunger/roman-nguyen-TBdSTcSwXxo-unsplash-1920.jpg" alt="Man drinking" class="card__img u-margin-bottom-small">
+                    <div class="card__content u-margin-bottom-small">
+                        <p>Rise Against Hunger has the vision of a world without hunger. They provide food and life-changing aid to the world’s most vulnerable.</p>
+                        <p>They served around of <strong>537 million meals packaged</strong> in <strong>78 different countries.</strong></p>
+                    </div>
+                    <a href="https://www.riseagainsthunger.org/take-action/" target="_blank" class="btn btn--small-larger">Visit &rarr;</a>
+                </div>
+
+
+                <div class="card">
+                    <h3 class="card__title heading-3">Hunger Free America</h3>
+                    <img src="assets/images/hunger/nate-greno-gQ46yzNYF28-unsplash-1920.jpg" alt="A little boy" class="card__img u-margin-bottom-small">
+                    <div class="card__content u-margin-bottom-small">
+                        <p>Is an organization dedicated to make America hunger free, a country with more than 37 million people struggling against hunger.</p>
+                        <p>They provide <strong>free food and assistance in New York City.</strong></p>
+                    </div>
+                    <a href="https://hungervolunteer.volunteerhub.com/" target="_blank" class="btn btn--small-larger">Visit &rarr;</a>
+                </div>
+    
+            </div>
+           
+        </section>
+
+
+    </main>
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__contact">
+                <h2 class="footer__title">Contact Us</h2>
+                <a href="mailto:info@sharehumanity.com" class="footer__email">info@sharehumanity.com</a>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/" class="footer__icon-link" target="_blank">
+                        <svg class="footer__icon">
+                            <use xlink:href="assets/images/sprite.svg#icon-facebook2"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer__icon-link" target="_blank">
+                        <svg class="footer__icon">
+                            <use xlink:href="assets/images/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" class="footer__icon-link" target="_blank">
+                        <svg class="footer__icon">
+                            <use xlink:href="assets/images/sprite.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__logo-box">
+                <img src="assets/images/logo-white.svg" alt="Share Humanity Logo" class="footer__logo">
+            </div>
+
+
+            <div class="footer__join-us">
+                <h2 class="footer__title">Join Us</h2>
+                <form action="#" class="footer__form">
+                    <input type="email" class="footer__email-input" id="footer-email" required placeholder="Your Email...">
+                    <label for="footer-email" class="footer__email-label">Your Email...</label>
+                    <button class="btn btn--small-larger">Join Us</button>
+                </form>
+                
+            </div>
+
+        </div>
+
+
+        <div class="footer__nav">
+            <p class="footer__copy">
+                    &copy; 2020 Share Humanity 
+            </p>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Work with Us</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Privacy Police</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Terms of Use</a>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+// HEADER
+.section-detail-header {
+
+    @include sectionIntro;
+
+
+    &--poverty {
+        background-image: linear-gradient(250deg, rgba($color-grey-light-1, 0.5) 50%, rgba($color-grey-light-1, .7) 60%, rgba($color-grey-light-1, 1) 100%), 
+        linear-gradient(to bottom, rgba($color-grey-light-1, 0.2) 50%, rgba($color-grey-light-1, .9) 100%),
+        url(../images/poverty/ben-richardson-WV-NgeS9oRw-unsplash-1920.jpg);
+        background-position: center;
+    }
+
+    &--hunger {
+        background-image: linear-gradient(250deg, rgba($color-grey-light-1, 0.5) 50%, rgba($color-grey-light-1, .7) 60%, rgba($color-grey-light-1, 1) 100%), 
+        linear-gradient(to bottom, rgba($color-grey-light-1, 0.2) 50%, rgba($color-grey-light-1, .9) 100%),
+        url(../images/hunger/timothy-barlin-_nFc2IRUHrM-unsplash-1920.jpg);
+        background-position: left;
+    }
+
+    &--health {
+        background-image: linear-gradient(250deg, rgba($color-grey-light-1, 0.5) 50%, rgba($color-grey-light-1, .7) 60%, rgba($color-grey-light-1, 1) 100%), 
+        linear-gradient(to bottom, rgba($color-grey-light-1, 0.2) 50%, rgba($color-grey-light-1, .9) 100%),
+        url(../images/education/bill-wegener-LqOO5Ko0zSo-unsplash-1920.jpg);
+        background-position: center;
+    }
+
+    &--water {
+        background-image: linear-gradient(250deg, rgba($color-grey-light-1, 0.5) 50%, rgba($color-grey-light-1, .7) 60%, rgba($color-grey-light-1, 1) 100%), 
+        linear-gradient(to bottom, rgba($color-grey-light-1, 0.2) 50%, rgba($color-grey-light-1, .9) 100%),
+        url(../images/water-sanitation/gallery-ds-X_tEarX6svc-unsplash-1920.jpg);
+        background-position: center;
+    }
+
+
+    &--climate {
+        background-image: linear-gradient(250deg, rgba($color-grey-light-1, 0.5) 50%, rgba($color-grey-light-1, .7) 60%, rgba($color-grey-light-1, 1) 100%), 
+        linear-gradient(to bottom, rgba($color-grey-light-1, 0.2) 50%, rgba($color-grey-light-1, .9) 100%),
+        url(../images/climate-change/yvette-zhang-g-tyziMh37o-unsplash-1920.jpg);
+        background-position: center;
+    }
+
+
+    background-size: cover;
+    
+}
+
+
+.detail-header {
+    &__text-box {
+        height: 90%;
+        width: 70%;
+        margin: 0 auto;
+        display: flex;
+        padding-top: 7rem;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+
+        @include responsive(phone) {
+            width: 90%; 
+        }
+    }
+
+    &__title{
+        @include title;
+        width: 100%;
+        text-align: left;
+        color: $color-grey-dark-3;
+
+        @include responsive(phone) {
+            text-align: center;
+        }
+    }
+
+    &__subtitle {        
+        width: 100%;
+
+        font-size: 2rem;
+        font-weight: 400;
+        text-align: left;
+        letter-spacing: .6rem;
+        word-spacing: .2rem;
+
+        
+        @include responsive(phone) {
+            text-align: center;
+        }
+    }
+
+}
+
+
+
+// ALL SECTIONS - COMMON SPECS
+.section-facts, .section-areas, .section-events {
+    @include centerContainer;
+
+    @include responsive(tab-land) {
+        width: 90%;
+    }
+
+}
+
+
+
+// FACTS
+.facts {
+  
+    &__list {
+        list-style: disc;
+        padding-left: 2rem;
+        
+    }
+
+    &__item {
+        margin-bottom: 1rem;
+        
+    }
+
+    &__info {
+        font-size: 1.4rem;
+        margin-top: 4rem;
+        text-align: right;
+    }
+
+}
+
+
+// MOST AFFECTED AREAS
+.areas {
+    
+    &__img {
+        display: block;
+        width: 100%;
+    }
+
+    &__caption {
+        font-size: 1.4rem;
+        margin-top: 2rem;
+        text-align: right;
+    }
+}
+
+
+// EVENTS
+.events {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-row-gap: 5rem;
+    grid-column-gap: 5rem;
+}

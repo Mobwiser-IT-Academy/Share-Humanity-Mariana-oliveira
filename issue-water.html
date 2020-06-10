@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Humanity</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" href="assets/images/icon.svg"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> 
+    
+</head>
+<body>
+
+    
+     <!-- HEADER -->
+     <header class="header">
+        
+        <!-- Logo -->
+        <a href="index.html" class="header__logo-box">
+            <img src="assets/images/logo.svg" alt="Share Humanity Logo" class="header__logo">
+        </a>
+
+        <!-- Navigation -->
+        <nav class="nav">
+
+            <!-- Toggle Menu -->
+            <input type="checkbox" id="nav-toggle" class="nav__toggle"/>
+            <label for="nav-toggle" class="nav__toggle-button" onclick="changeIcon(this)">
+                <svg class="nav__toggle-icon">
+                    <use xlink:href="assets/images/sprite.svg#icon-menu"></use>
+                </svg>
+            </label>
+
+            <!-- Button to close menu above page -->
+            <button class="nav__back-button" onclick="closeMenu(); changeIcon(this)">&nbsp;</button>           
+
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link" onclick="changeLinkActive(this)">Home</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" onclick="changeLinkActive(this)">Our Work</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" onclick="changeLinkActive(this)">About Us</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" onclick="changeLinkActive(this)">Contact Us</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Search -->
+
+        <form action="#"  class="search">
+
+            <!-- Toggle Searchbox -->
+            <input type="checkbox" id="search-toggle" class="search__toggle"/>
+            <label for="search-toggle" class="search__toggle-button" onclick="changeIcon(this)">
+                <svg class="search__toggle-icon">
+                    <use xlink:href="assets/images/sprite.svg#icon-search"></use>
+                </svg>
+            </label>
+
+            <div class="search__input_box">
+                <input type="text" class="search__input" placeholder="Search">
+                <button class="search__btn">
+                    <svg class="search__icon">
+                        <use xlink:href="assets/images/sprite.svg#icon-search"></use>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+    <main class="full-container">
+        <header class="section-detail-header section-detail-header--water u-margin-bottom-big">
+            <div class="detail-header__text-box u-margin-bottom-big">
+                <h1 class="detail-header__title  u-margin-bottom-small">Water and Sanitation</h1>
+                <h2 class="detail-header__subtitle  u-margin-bottom-huge">At least 892 million people continue to practice open defecation</h2>       
+                <a href="#section-events" class="btn btn--big btn--animated">Know how to help</a>
+            </div>     
+                     
+        </header>
+
+
+        <!-- FACTS -->
+        <section class="section-facts u-margin-bottom-big">
+            <h1 class="heading-1">Facts</h1>
+           
+                <ul class="facts__list">
+                    <li class="facts__item"><strong>1 in 4 health care facilities</strong> lacks basic water services.</li>
+                    <li class="facts__item"><strong>Half of the world’s population</strong> is already experiencing severe water scarcity at least one month a year</li>
+                    <li class="facts__item"><strong>785 million people</strong> remain without even basic drink water services.</li>
+                    <li class="facts__item"><strong>2 billion people</strong> live in countries experiencing hight water stress.</li>
+                    <li class="facts__item"><strong>2.4 billion people </strong> lack access to basic sanitation services, such as toilets or latrines.</li>
+                    <li class="facts__item"><strong>2 out 5 people</strong> worldwide do not have a basic handwashing facility with soap and water ate home.</li>
+                </ul>
+            
+                <p class="facts__info">This info is provided by <a class="inline-link" href="https://www.un.org/sustainabledevelopment/poverty/" target="_blank">United Nations.</a></p>
+            </div>
+        
+        
+        </section>
+
+        
+        <!-- MOST AFFECTED AREAS -->
+        <section class="section-areas u-margin-bottom-big">
+
+            <h1 class="heading-1">Most affected areas</h1>
+            
+            <figure class="areas__map">
+                <a href="https://commons.wikimedia.org/wiki/File:Urban_population_living_in_slums,_OWID.svg#/media/File:Urban_population_living_in_slums,_OWID.svg" target="_blank">
+                    <img class="areas__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Urban_population_living_in_slums%2C_OWID.svg/1200px-Urban_population_living_in_slums%2C_OWID.svg.png" alt="Urban population living in slums, OWID.svg">
+                </a>
+                <figcaption class="areas__caption">
+                    By Our World In Data - <a rel="nofollow" target="_blank" class="inline-link" href="https://ourworldindata.org/grapher/urban-slums-total">https://ourworldindata.org/grapher/urban-slums-total</a>, <a href="https://creativecommons.org/licenses/by/3.0" title="Creative Commons Attribution 3.0" target="_blank" class="inline-link">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=86956552" target="_blank" class="inline-link">Link</a>     
+                </figcaption>
+
+            </figure>
+
+
+            
+
+           
+        </section>
+
+
+        <!-- EVENTS -->
+        <section class="section-events u-margin-bottom-big" id="section-events">
+
+            <h1 class="heading-1">How to Help</h1>
+
+            <p class="u-margin-bottom-medium">Here you can find different entities and communities that you can join as volunteer to help on this fight against poverty.</p>
+
+            <div class="events">
+                <div class="card">
+                    <h3 class="card__title heading-3">GoAbroad</h3>
+                    <img src="assets/images/water-sanitation/roberto-nickson-T92YFbo07-Q-unsplash-1920.jpg" alt="Water on a brown hill" class="card__img u-margin-bottom-small">
+                    <div class="card__content u-margin-bottom-small">
+                        <p>Has as mission change lives through meaningful travel, one destination and one experience at a time.</p>
+                        <p>Offers <strong>more than 200</strong> volunteer opportunities to water projects.</p>
+                    </div>
+                    <a href="https://www.goabroad.com/volunteer-abroad/search/water/volunteer-abroad-1" target="_blank" class="btn btn--small-larger">Visit &rarr;</a>
+                </div>
+               
+                <div class="card">
+                    <h3 class="card__title heading-3">Water for people</h3>
+                    <img src="assets/images/water-sanitation/marcin-jozwiak-xmJs3rev5Es-unsplash-1920.jpg" alt="Effluent treatment plant" class="card__img u-margin-bottom-small">
+                    <div class="card__content u-margin-bottom-small">
+                        <p>Water For People was built by volunteers, and everything they do comes from the belief that everyone should have access to clean water and sanitation services.</p>
+                        <p>Their work allowed that <strong>468 thousand people</strong> reached with sanitation services.</p>
+                    </div>
+                    <a href="https://www.waterforpeople.org/volunteer/" target="_blank" class="btn btn--small-larger">Visit &rarr;</a>
+                </div>
+
+
+                <div class="card">
+                    <h3 class="card__title heading-3">Volunteer World</h3>
+                    <img src="assets/images/water-sanitation/pavel-kolar-ih_5YB06HxI-unsplash-1920.jpg" alt="An huge dam" class="card__img u-margin-bottom-small">
+                    <div class="card__content u-margin-bottom-small">
+                        <p>Volunteer World is the World's leading comparison platform for volunteer abroad programs.</p>
+                        <p>Offers a lot volunteer opportunities to <strong>ensure availability and sustainable management of water and sanitation for all.</strong></p>
+                    </div>
+                    <a href="https://www.volunteerworld.com/en/volunteer-abroad/goal-6-clean-water-and-sanitation" target="_blank" class="btn btn--small-larger">Visit &rarr;</a>
+                </div>
+
+
+            </div>
+           
+        </section>
+
+
+    </main>
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__contact">
+                <h2 class="footer__title">Contact Us</h2>
+                <a href="mailto:info@sharehumanity.com" class="footer__email">info@sharehumanity.com</a>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/" class="footer__icon-link" target="_blank">
+                        <svg class="footer__icon">
+                            <use xlink:href="assets/images/sprite.svg#icon-facebook2"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer__icon-link" target="_blank">
+                        <svg class="footer__icon">
+                            <use xlink:href="assets/images/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" class="footer__icon-link" target="_blank">
+                        <svg class="footer__icon">
+                            <use xlink:href="assets/images/sprite.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__logo-box">
+                <img src="assets/images/logo-white.svg" alt="Share Humanity Logo" class="footer__logo">
+            </div>
+
+
+            <div class="footer__join-us">
+                <h2 class="footer__title">Join Us</h2>
+                <form action="#" class="footer__form">
+                    <input type="email" class="footer__email-input" id="footer-email" required placeholder="Your Email...">
+                    <label for="footer-email" class="footer__email-label">Your Email...</label>
+                    <button class="btn btn--small-larger">Join Us</button>
+                </form>
+                
+            </div>
+
+        </div>
+
+
+        <div class="footer__nav">
+            <p class="footer__copy">
+                    &copy; 2020 Share Humanity 
+            </p>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Work with Us</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Privacy Police</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Terms of Use</a>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

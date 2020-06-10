@@ -1,0 +1,51 @@
+body{	
+    font-family: $main-font, sans-serif;
+	font-size: $default-font-size;
+	color: $color-grey-dark-3;
+	line-height: 1.6;
+	letter-spacing: 0.15rem;
+	word-spacing: .3rem;	
+}
+
+.heading-1{
+    font-size: 4rem;
+	font-weight: 200;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 2rem 1rem;
+
+}
+
+.heading-2 {
+    font-size: 3rem;
+	font-weight: 200;
+	letter-spacing: 0.1rem;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 2rem 1rem;
+}
+
+
+.heading-3 {
+	font-size: 1.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 1.5rem;
+
+	@include responsive(tab-land) {
+		font-size: 1.8rem;
+	}	
+}
+
+
+.inline-link {
+	&:link, &:visited {
+		text-decoration: none;
+		color: $color-primary;
+		transition: all .2s;
+	}
+
+	@include hoverEffect;
+}

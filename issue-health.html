@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Humanity</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="shortcut icon" href="assets/images/icon.svg"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> 
+    
+</head>
+<body>
+
+    
+     <!-- HEADER -->
+     <header class="header">
+        
+        <!-- Logo -->
+        <a href="index.html" class="header__logo-box">
+            <img src="assets/images/logo.svg" alt="Share Humanity Logo" class="header__logo">
+        </a>
+
+        <!-- Navigation -->
+        <nav class="nav">
+
+            <!-- Toggle Menu -->
+            <input type="checkbox" id="nav-toggle" class="nav__toggle"/>
+            <label for="nav-toggle" class="nav__toggle-button" onclick="changeIcon(this)">
+                <svg class="nav__toggle-icon">
+                    <use xlink:href="assets/images/sprite.svg#icon-menu"></use>
+                </svg>
+            </label>
+
+            <!-- Button to close menu above page -->
+            <button class="nav__back-button" onclick="closeMenu(); changeIcon(this)">&nbsp;</button>           
+
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html" class="nav__link" onclick="changeLinkActive(this)">Home</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" onclick="changeLinkActive(this)">Our Work</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" onclick="changeLinkActive(this)">About Us</a></li>
+                <li class="nav__item"><a href="#" class="nav__link" onclick="changeLinkActive(this)">Contact Us</a></li>
+            </ul>
+        </nav>
+
+
+        <!-- Search -->
+
+        <form action="#"  class="search">
+
+            <!-- Toggle Searchbox -->
+            <input type="checkbox" id="search-toggle" class="search__toggle"/>
+            <label for="search-toggle" class="search__toggle-button" onclick="changeIcon(this)">
+                <svg class="search__toggle-icon">
+                    <use xlink:href="assets/images/sprite.svg#icon-search"></use>
+                </svg>
+            </label>
+
+            <div class="search__input_box">
+                <input type="text" class="search__input" placeholder="Search">
+                <button class="search__btn">
+                    <svg class="search__icon">
+                        <use xlink:href="assets/images/sprite.svg#icon-search"></use>
+                    </svg>
+                </button>
+            </div>
+
+        </form>
+
+    </header>
+
+
+
+    <!-- MAIN -->
+    <main class="full-container">
+        <header class="section-detail-header section-detail-header--health u-margin-bottom-big">
+            <div class="detail-header__text-box u-margin-bottom-big">
+                <h1 class="detail-header__title  u-margin-bottom-small">Health</h1>
+                <h2 class="detail-header__subtitle  u-margin-bottom-huge">More than 5 million children die before their fifth birthday each year</h2>       
+                <a href="#section-events" class="btn btn--big btn--animated">Know how to help</a>
+            </div>     
+                     
+        </header>
+
+
+        <!-- FACTS -->
+        <section class="section-facts u-margin-bottom-big">
+            <h1 class="heading-1">Facts</h1>
+           
+                <ul class="facts__list">
+                    <li class="facts__item">Children born into poverty are almost <strong>twice as likely to die before the age of five</strong> as those from wealthier families.</li>
+                    <li class="facts__item"> <strong>77.3 million</strong> people have become infected with HIV since the start of the epidemic.</li>
+                    <li class="facts__item"> <strong>35.4 million </strong> people have died from AIDS-related illnesses since the start of the epidemic.</li>
+                    <li class="facts__item"><strong>Tuberculosis</strong> remains the leading cause of death among people living with HIV.</li>
+                    <li class="facts__item">In Eastern Asia, Northern Africa and Southern Asia, <strong>maternal mortality has declined by around two-thirds.</strong></li>
+                    <li class="facts__item">The global malaria incidence rate <strong>has fallen by an estimated 37%</strong> and the mortality rates by <strong>58%.</strong></li>
+                </ul>
+            
+                <p class="facts__info">This info is provided by <a class="inline-link" href="https://www.un.org/sustainabledevelopment/poverty/" target="_blank">United Nations.</a></p>
+            </div>
+        
+        
+        </section>
+
+        
+        <!-- MOST AFFECTED AREAS -->
+        <section class="section-areas u-margin-bottom-big">
+
+            <h1 class="heading-1">Most affected areas</h1>
+            
+            <figure class="areas__map">
+                <a href="https://commons.wikimedia.org/wiki/File:Percentage_of_population_covered_by_health_insurance,_OWID.svg#/media/File:Percentage_of_population_covered_by_health_insurance,_OWID.svg" target="_blank">
+                    <img class="areas__img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Percentage_of_population_covered_by_health_insurance%2C_OWID.svg/1200px-Percentage_of_population_covered_by_health_insurance%2C_OWID.svg.png" alt="Percentage of population covered by health insurance, OWID.svg">
+                </a>
+
+                <figcaption class="areas__caption">
+                    By Our World In Data - <a rel="nofollow"  target="_blank" class="inline-link" href="https://ourworldindata.org/grapher/health-protection-coverage">https://ourworldindata.org/grapher/health-protection-coverage</a>, <a href="https://creativecommons.org/licenses/by/3.0"  target="_blank" class="inline-link" title="Creative Commons Attribution 3.0">CC BY 3.0</a>, <a href="https://commons.wikimedia.org/w/index.php?curid=86925626"  target="_blank" class="inline-link">Link</a>        
+                </figcaption>
+
+            </figure>
+           
+        </section>
+
+
+        <!-- EVENTS -->
+        <section class="section-events u-margin-bottom-big" id="section-events">
+
+            <h1 class="heading-1">How to Help</h1>
+
+            <p class="u-margin-bottom-medium">Here you can find different entities and communities that you can join as volunteer to help on this fight against poverty.</p>
+
+            <div class="events">
+                <div class="card">
+                    <h3 class="card__title heading-3">FIMRC</h3>
+                    <img src="assets/images/health/cdc-kOS3uo80NTM-unsplas-1920.jpg" alt="Girl taking a vaccine" class="card__img u-margin-bottom-small">
+                    <div class="card__content u-margin-bottom-small">
+                        <p>Foundation for International Medical Relief of Children is a non-profit organization dedicated to improving the health of families in the developing world.</p>
+                        <p>They work in <strong>9 different countries, to provide access to healthcare for low-resource and medically underserved families around the world.</strong></p>
+                    </div>
+                    <a href="https://www.fimrc.org/global-health-volunteer-program" target="_blank" class="btn btn--small-larger">Visit &rarr;</a>
+                </div>
+               
+                <div class="card">
+                    <h3 class="card__title heading-3">HVO</h3>
+                    <img src="assets/images/health/national-cancer-institute-yg1Zayn0Few-unsplash-1920.jpg" alt="A little boy suffering from cancer" class="card__img u-margin-bottom-small">
+                    <div class="card__content u-margin-bottom-small">
+                        <p>Health Volunteers Overseas projects are staffed by highly qualified health care professionals.</p>
+                        <p>Improves the availability and quality of health care <strong>through the education, training and professional development of the health workforce></strong> in resource-scarce countries.</p>
+                    </div>
+                    <a href="https://hvousa.org/get-involved/volunteer-application/" target="_blank" class="btn btn--small-larger">Visit &rarr;</a>
+                </div>
+
+
+                <div class="card">
+                    <h3 class="card__title heading-3">GVI</h3>
+                    <img src="assets/images/health/macau-photo-agency--xrAADPPU4M-unsplash-1920.jpg" alt="Girls using mask to protect from viruses" class="card__img u-margin-bottom-small">
+                    <div class="card__content u-margin-bottom-small">
+                        <p>Help communities gain access to clean water, sanitation and information on a variety of health topics such as maternal health, HIV/AIDS awareness and basic nutrition.</p>
+                        <p>GVI runs programs in <strong>21 locations, in 13 countries around the world.</strong></p>
+                    </div>
+                    <a href="https://www.gvi.co.uk/volunteer-abroad/projects/" target="_blank" class="btn btn--small-larger">Visit &rarr;</a>
+                </div>
+    
+            </div>
+           
+        </section>
+
+
+    </main>
+
+
+
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__contact">
+                <h2 class="footer__title">Contact Us</h2>
+                <a href="mailto:info@sharehumanity.com" class="footer__email">info@sharehumanity.com</a>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/" class="footer__icon-link" target="_blank">
+                        <svg class="footer__icon">
+                            <use xlink:href="assets/images/sprite.svg#icon-facebook2"></use>
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/" class="footer__icon-link" target="_blank">
+                        <svg class="footer__icon">
+                            <use xlink:href="assets/images/sprite.svg#icon-instagram"></use>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com" class="footer__icon-link" target="_blank">
+                        <svg class="footer__icon">
+                            <use xlink:href="assets/images/sprite.svg#icon-twitter"></use>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__logo-box">
+                <img src="assets/images/logo-white.svg" alt="Share Humanity Logo" class="footer__logo">
+            </div>
+
+
+            <div class="footer__join-us">
+                <h2 class="footer__title">Join Us</h2>
+                <form action="#" class="footer__form">
+                    <input type="email" class="footer__email-input" id="footer-email" required placeholder="Your Email...">
+                    <label for="footer-email" class="footer__email-label">Your Email...</label>
+                    <button class="btn btn--small-larger">Join Us</button>
+                </form>
+                
+            </div>
+
+        </div>
+
+
+        <div class="footer__nav">
+            <p class="footer__copy">
+                    &copy; 2020 Share Humanity 
+            </p>
+            <ul class="footer__list">
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Work with Us</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Privacy Police</a>
+                </li>
+                <li class="footer__item">
+                    <a href="#" class="footer__link">Terms of Use</a>
+                </li>
+            </ul>
+        </div>
+
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+.intro {
+    height: 90%;
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+
+    @include responsive(extra-bp) {
+        width: 90%;
+    }
+
+    &__text-box {
+        display: flex;
+        align-items: center;   
+        
+        @include responsive(tab-port) {
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+
+    &__title{
+        
+        width: 50%;
+        padding-right: 5rem;
+        text-align: center;
+        
+        @include title;
+        text-align: center;
+
+
+        animation-name: moveInLeft;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+        @include responsive(extra-bp) {
+            font-size: 5rem;
+        }
+
+        @include responsive(tab-land) {
+            font-size: 4rem;
+        }
+
+        @include responsive(tab-port) {
+            width: 100%; 
+            padding-right: 0;
+        }
+    }
+
+    &__subtitle {
+        width: 50%;
+        vertical-align: top;
+        padding-left: 5rem;
+        text-align: center;
+        border-left: 1px solid $color-white;
+
+        font-size: 5rem;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: .6rem;
+        word-spacing: .2rem;
+
+        animation-name: moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+
+
+        @include responsive(extra-bp) {
+            font-size: 4rem;
+        }
+
+
+        @include responsive(tab-land) {
+            font-size: 3rem;
+        }
+
+        @include responsive(tab-port) {
+            width: 100%; 
+            border-left: none;
+            padding-left: 0;
+            padding-top: 3rem;
+        }
+    }
+}
