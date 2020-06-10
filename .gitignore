@@ -2,4 +2,6 @@
 node_modules
 
 #Ignore compiled css
-assets/css
+assets/css/main.css
+assets/css/style.comp.css
+assets/css/style.prefix.css
