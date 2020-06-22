@@ -1,3 +1,8 @@
+import "../issue-climage-change.html";
+import "../issue-education.html";
+import "../styles/main.scss"
+
+
 const NAV_LINK = document.querySelectorAll(".nav__link");
 const TOGGLE_MENU = document.getElementById("nav-toggle");
 const ICON_TOGGLE_MENU = document.querySelector(".nav__toggle-icon > use");
@@ -25,21 +30,21 @@ function changeIcon(elem) {
 
 	//checks which element called the functions and then which is the current icon used to change the other one
 	if(elem.classList.contains("nav__toggle-button")) {
-		if(ICON_TOGGLE_MENU.getAttribute('xlink:href') ==="assets/images/sprite.svg#icon-cross") {		
-			ICON_TOGGLE_MENU.setAttribute('xlink:href', 'assets/images/sprite.svg#icon-menu');
+		if(ICON_TOGGLE_MENU.getAttribute("xlink:href") ==="assets/images/sprite.svg#icon-cross") {		
+			ICON_TOGGLE_MENU.setAttribute("xlink:href", "assets/images/sprite.svg#icon-menu");
 		} else {		
-			ICON_TOGGLE_MENU.setAttribute('xlink:href', 'assets/images/sprite.svg#icon-cross');
+			ICON_TOGGLE_MENU.setAttribute("xlink:href", "assets/images/sprite.svg#icon-cross");
 		}
 
 	} else if(elem.classList.contains("search__toggle-button")) {
-		if(ICON_TOGGLE_SEARCH.getAttribute('xlink:href') ==="assets/images/sprite.svg#icon-cross") {		
-			ICON_TOGGLE_SEARCH.setAttribute('xlink:href', 'assets/images/sprite.svg#icon-search');
+		if(ICON_TOGGLE_SEARCH.getAttribute("xlink:href") ==="assets/images/sprite.svg#icon-cross") {		
+			ICON_TOGGLE_SEARCH.setAttribute("xlink:href", "assets/images/sprite.svg#icon-search");
 		} else {		
-			ICON_TOGGLE_SEARCH.setAttribute('xlink:href', 'assets/images/sprite.svg#icon-cross');
+			ICON_TOGGLE_SEARCH.setAttribute("xlink:href", "assets/images/sprite.svg#icon-cross");
 		}
 
 	} else if(elem.classList.contains("nav__back-button")) {
-		ICON_TOGGLE_MENU.setAttribute('xlink:href', 'assets/images/sprite.svg#icon-menu');
+		ICON_TOGGLE_MENU.setAttribute("xlink:href", "assets/images/sprite.svg#icon-menu");
 	}
 }
 
