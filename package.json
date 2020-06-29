@@ -4,15 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "nodemon -e scss -x \"npm run compiledev:sass\"",
-    "compiledev:sass": "node-sass assets/sass/main.scss assets/css/main.css",
-    "devserver": "live-server",
-    "start": "npm-run-all --parallel devserver watch:sass",
-
-    "compile:sass": "node-sass assets/sass/main.scss assets/css/style.comp.css",
-    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" assets/css/style.comp.css -o assets/css/style.prefix.css",
-    "compress:css": "node-sass assets/css/style.prefix.css assets/css/main.css --output-style compressed",
-    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+    "start": "webpack-dev-server --config webpack.dev.js --open",
+    "build": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
@@ -25,11 +18,24 @@
   },
   "homepage": "https://github.com/Mobwiser-IT-Academy/Share-Humanity-Mariana-oliveira#readme",
   "devDependencies": {
-    "autoprefixer": "^9.8.0",
-    "concat": "^1.0.3",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^3.6.0",
+    "file-loader": "^6.0.0",
+    "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.14.1",
-    "nodemon": "^2.0.4",
-    "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.1"
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "svg-sprite-loader": "^5.0.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "clean-webpack-plugin": "^3.0.0"
   }
 }
