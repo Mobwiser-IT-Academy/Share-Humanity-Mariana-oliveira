@@ -1,5 +1,5 @@
 const path = require("path");
-const common = require("./webpack.common");
+const common = require("./webpack.dev");
 const merge = require("webpack-merge");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -24,13 +24,6 @@ module.exports = merge(common, {
 					"sass-loader"   // 1. Turns sass into css
 				]
 			},
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				use: {
-					loader: 'babel-loader'
-				}
-			}, 
 			{
 				test: /\.html$/,
 				exclude: path.resolve(__dirname, "src/index.html"),

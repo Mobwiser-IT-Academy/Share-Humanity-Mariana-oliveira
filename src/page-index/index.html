@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Humanity</title>
+    <link rel="shortcut icon" href="assets/images/icon.svg"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet"> 
+    
+</head>
+<body>
+    
+
+     <!-- HEADER -->
+     <%= require('html-loader!../partials/header.html') %> 
+
+    <!-- MAIN -->
+    <main>
+        <section class="section-intro u-margin-bottom-big">
+            <div class="intro">
+                <div class="intro__text-box u-margin-bottom-big">
+                    <h1 class="intro__title">All Human life Matters</h1>
+                    <h2 class="intro__subtitle">Share Humanity<br>Change their lives</h2>
+                </div>
+                <a href="#" class="btn btn--big btn--animated">Know how to help</a>
+            </div>
+        </section>
+
+        <section class="section-issue u-margin-bottom-big">
+            <h1 class="heading-1 u-margin-bottom-medium">Humanitarian Issues</h1>
+
+            <div class="issues">
+                
+                <!----> <div class="issue">
+                    <h3 class="heading-3">Poverty</h3>
+                    <img src="<%= require('../assets/images/poverty/patrick-hendry-LL9wzvCI2gw-unsplash-1920.jpg')%>" alt="A clearly needy elderly person" class="issue__img">
+                    <div class="issue__info">
+                        <p class="issue__people">People Affected: <span class="issue__people-affected">700 M</span></p>
+                        <p class="issue__priority">Priority Rank: <span class="issue__priority-rank">1</span></p>
+                        <a href="issue.html" class="btn btn--small">See More</a>
+                    </div>
+                </div>
+
+                <div class="issue">
+                    <h3 class="heading-3">Hunger</h3>
+                    <img src="../assets/images/hunger/muhammad-muzamil-7S9x9US26Ow-unsplash-1920.jpg" alt="Little boy with an empty pan" class="issue__img">
+                    <div class="issue__info">
+                        <p class="issue__people">People Affected: <span class="issue__people-affected">820 M</span></p>
+                        <p class="issue__priority">Priority Rank: <span class="issue__priority-rank">2</span></p>
+                        <a href="issue-hunger.html" class="btn btn--small">See More</a>
+                    </div>
+                </div>
+
+                <div class="issue">
+                    <h3 class="heading-3">Health</h3>
+                    <img src="../assets/images/health/tedward-quinn-qN5ZqBoIWKo-unsplash-1920.jpg" alt="A person using protective equipment to disinfect the space" class="issue__img">
+                    <div class="issue__info">
+                        <p class="issue__people">People Affected: <span class="issue__people-affected">820 M</span></p>
+                        <p class="issue__priority">Priority Rank: <span class="issue__priority-rank">3</span></p>
+                        <a href="issue-health.html" class="btn btn--small">See More</a>
+                    </div>
+                </div>
+
+                <div class="issue">
+                    <h3 class="heading-3">Education</h3>
+                    <img src="../assets/images/education/nate-greno-p6Fu1MuBOdg-unsplash-1920.jpg" alt="Little boy hugging a book" class="issue__img">
+                    <div class="issue__info">
+                        <p class="issue__people">People Affected: <span class="issue__people-affected">260 M</span></p>
+                        <p class="issue__priority">Priority Rank: <span class="issue__priority-rank">4</span></p>
+                        <a href="issue-education.html" class="btn btn--small">See More</a>
+                    </div>
+                </div>
+                        
+                <div class="issue">
+                    <h3 class="heading-3">Water and Sanitation</h3>
+                    <img src="../assets/images/water-sanitation/ivan-bandura-6wSevhW1Dzc-unsplash-1920.jpg" alt="Effluent treatment plant" class="issue__img">
+                    <div class="issue__info">
+                        <p class="issue__people">People Affected: <span class="issue__people-affected">2000 M</span></p>
+                        <p class="issue__priority">Priority Rank: <span class="issue__priority-rank">6</span></p>
+                        <a href="issue-water.html" class="btn btn--small">See More</a>
+                    </div>
+                </div>
+
+                <div class="issue">
+                    <h3 class="heading-3">Climate Change</h3>
+                    <img src="../assets/images/climate-change/annie-spratt-d8FjB1_8xHQ-unsplash-1920.jpg" alt="Melting glaciers" class="issue__img">
+                    <div class="issue__info">
+                        <p class="issue__people">People Affected: <span class="issue__people-affected">Everyone</span></p>
+                        <p class="issue__priority">Priority Rank: <span class="issue__priority-rank">7</span></p>
+                        <a href="issue-climate-change.html" class="btn btn--small">See More</a>
+                    </div>
+                </div> <!---->
+
+            </div>
+       
+        </section>
+        
+    </main>
+
+    
+
+    <!-- FOOTER -->
+    <%= require('html-loader!../partials/footer.html') %> 
+   
+</body>
+</html>

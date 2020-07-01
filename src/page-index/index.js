@@ -1,28 +1,7 @@
 import "../styles/main.scss";
 import "../assets/images/sprite.svg";
-// import "../issue-climate-change.html";
-// import "../issue-education.html";
-// import "../issue-health.html";
-// import "../issue-hunger.html";
-// import "../issue-poverty.html";
-// import "../issue-water.html";
-import { htmlElements } from "./app/base/base";
-// import { changeLinkActive } from "./app/ui-interactions/change-link-active";
-// import { changeIcon } from "./app/ui-interactions/change-icon";
+import { htmlElements } from "../scripts/app/base/base";
 
-// Change active nav link
-function changeLinkActive(elem){
-	
-	//Remove class active from active link
-	for(var i = 0; i < htmlElements.navLink.length; i++) {
-
-		htmlElements.navLink[i].classList.remove("nav__link--active");			
-	}
-
-	//Add class active to current link
-	elem.classList.add("nav__link--active");
-
-}
 
 
 //To change icon of menu or search button
@@ -51,6 +30,21 @@ function changeIcon(elem) {
 
 // Closes nav menu 
 function closeMenu() {
-	htmlElements.toggleMenu.checked = false;
+    htmlElements.toggleMenu.checked = false;
+    
 }
 
+
+// CHANGE ACTIVE NAV LINK
+document.querySelectorAll('.nav__item').forEach(function(el) {
+    el.addEventListener('click', function (elem){
+        //Remove class active from active link
+        for(var i = 0; i < htmlElements.navLink.length; i++) {
+
+            htmlElements.navLink[i].classList.remove("nav__link--active");			
+        }
+
+        //Add class active to current link
+        elem.target.classList.add("nav__link--active");
+    });	
+});
