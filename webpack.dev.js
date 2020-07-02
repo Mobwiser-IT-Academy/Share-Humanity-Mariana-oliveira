@@ -45,47 +45,49 @@ module.exports = {
 				  	}
 				] 
 			}, 
+			 {
+			 	test: /\.svg$/,
+            
+				// from all svg images
+				// include only sprite image
+				// include: path.resolve(__dirname, './src/assets/images/sprite.svg'), // new line
+                //     use: [
+                //         'svg-sprite-loader',
+                        
+                //     ]
+                // },
+				include: /.*sprite\.svg/,
+				exclude: /(icon.svg|logo.svg|logo-white.svg)/,
+				use: [
+					{
+						loader: 'svg-sprite-loader',
+						options: {
+							publicPath: '',
+						}
+					},
+				],
+			 },
 			// {
 			// 	test: /\.svg$/,
-            
-			// 	// from all svg images
-			// 	// include only sprite image
-			// 	// include: path.resolve(__dirname, './src/assets/images/sprite.svg'), // new line
-            //     //     use: [
-            //     //         'svg-sprite-loader',
-                        
-            //     //     ]
-            //     // },
-			// 	// include: /.*sprite\.svg/,
-			// 	// exclude: /(icon.svg|logo.svg|logo-white.svg)/,
-			// 	// use: [
-			// 	// 	{
-			// 	// 		loader: 'svg-sprite-loader',
-			// 	// 		options: {
-			// 	// 			publicPath: '',
-			// 	// 		}
-			// 	// 	},
-			// 	// ],
-			// },
-			{
-				test: /\.svg$/,
-				loader: 'svg-sprite-loader',
-				options: {
-				  extract: true,
-				  outputPath: 'dist/assets/sprites/'
-				}
-			}
+			// 	loader: 'svg-sprite-loader',
+			// 	options: {
+			// 	  extract: true,
+			// 	  outputPath: 'dist/assets/sprites/'
+			// 	}
+			// }
 		]
 	},
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: "./src/page-index/index.html",
+			favicon: './src/assets/images/icon.svg',
 			inject: true,
       		chunks: ['index'],
 			filename: 'index.html'
 		}),
 		new HtmlWebpackPlugin({
 			template: "./src/page-issue/issue.html",
+			favicon: './src/assets/images/icon.svg',
 			inject: true,
      		 chunks: ['issue'],
 			filename: 'issue.html'

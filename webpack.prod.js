@@ -62,12 +62,14 @@ module.exports =  {
 		new CleanWebpackPlugin(),
 		new HtmlWebpackPlugin({
 			template: "./src/page-index/index.html",
+			favicon: './src/assets/images/icon.svg',
 			inject: 'body',
       		chunks: ['index'],
 			filename: 'index.html'
 		}),
 		new HtmlWebpackPlugin({
 			template: "./src/page-issue/issue.html",
+			favicon: './src/assets/images/icon.svg',
 			inject: 'body',
      		 chunks: ['issue'],
 			filename: 'issue.html'
