@@ -1,6 +1,8 @@
 const path = require("path");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
+// const loader = require("sass-loader");
 
 module.exports = {
 	entry: {
@@ -36,27 +38,43 @@ module.exports = {
 				}
 			},
 			{
-				test: /\.svg$/,
-            
-				// from all svg images
-				// include only sprite image
-				// include: path.resolve(__dirname, './src/assets/images/sprite.svg'), // new line
-                //     use: [
-                //         'svg-sprite-loader',
-                        
-                //     ]
-                // },
-				include: /.*sprite\.svg/,
-				exclude: /(icon.svg|logo.svg|logo-white.svg)/,
+				test: /\.html$/,
 				use: [
 					{
-						loader: 'svg-sprite-loader',
-						options: {
-							publicPath: '',
-						}
-					},
-				],
-			},
+						loader: 'html-loader',
+				  	}
+				] 
+			}, 
+			// {
+			// 	test: /\.svg$/,
+            
+			// 	// from all svg images
+			// 	// include only sprite image
+			// 	// include: path.resolve(__dirname, './src/assets/images/sprite.svg'), // new line
+            //     //     use: [
+            //     //         'svg-sprite-loader',
+                        
+            //     //     ]
+            //     // },
+			// 	// include: /.*sprite\.svg/,
+			// 	// exclude: /(icon.svg|logo.svg|logo-white.svg)/,
+			// 	// use: [
+			// 	// 	{
+			// 	// 		loader: 'svg-sprite-loader',
+			// 	// 		options: {
+			// 	// 			publicPath: '',
+			// 	// 		}
+			// 	// 	},
+			// 	// ],
+			// },
+			{
+				test: /\.svg$/,
+				loader: 'svg-sprite-loader',
+				options: {
+				  extract: true,
+				  outputPath: 'dist/assets/sprites/'
+				}
+			}
 		]
 	},
 	plugins: [
@@ -71,6 +89,16 @@ module.exports = {
 			inject: true,
      		 chunks: ['issue'],
 			filename: 'issue.html'
+		}),
+		new HtmlWebpackPartialsPlugin({
+			path: path.join(__dirname, './src/partials/footer.html'),
+			location: 'footer',
+			template_filename: ['index.html', 'issue.html']
+		}),
+		new HtmlWebpackPartialsPlugin ({
+			path: path.join(__dirname, './src/partials/header.html'),
+			location: 'header',
+			template_filename: ['index.html', 'issue.html']
 		}),
 		new  SpriteLoaderPlugin()
 	],
