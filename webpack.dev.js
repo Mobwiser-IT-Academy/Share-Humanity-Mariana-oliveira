@@ -1,11 +1,11 @@
 const path = require("path");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-const SpriteLoaderPlugin = require('svg-sprite-loader/plugin');
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
-// const loader = require("sass-loader");
+
 
 module.exports = {
 	entry: {
+		main: "./src/scripts/index.js",
 		index: "./src/page-index/index.js", 
 		issue: "./src/page-issue/issue.js",
 	},
@@ -44,37 +44,7 @@ module.exports = {
 						loader: 'html-loader',
 				  	}
 				] 
-			}, 
-			 {
-			 	test: /\.svg$/,
-            
-				// from all svg images
-				// include only sprite image
-				// include: path.resolve(__dirname, './src/assets/images/sprite.svg'), // new line
-                //     use: [
-                //         'svg-sprite-loader',
-                        
-                //     ]
-                // },
-				include: /.*sprite\.svg/,
-				exclude: /(icon.svg|logo.svg|logo-white.svg)/,
-				use: [
-					{
-						loader: 'svg-sprite-loader',
-						options: {
-							publicPath: '',
-						}
-					},
-				],
-			 },
-			// {
-			// 	test: /\.svg$/,
-			// 	loader: 'svg-sprite-loader',
-			// 	options: {
-			// 	  extract: true,
-			// 	  outputPath: 'dist/assets/sprites/'
-			// 	}
-			// }
+			}
 		]
 	},
 	plugins: [
@@ -101,7 +71,6 @@ module.exports = {
 			path: path.join(__dirname, './src/partials/header.html'),
 			location: 'header',
 			template_filename: ['index.html', 'issue.html']
-		}),
-		new  SpriteLoaderPlugin()
+		})
 	],
 };

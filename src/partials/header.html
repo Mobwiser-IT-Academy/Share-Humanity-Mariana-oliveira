@@ -3,7 +3,7 @@
         
     <!-- Logo -->
     <a href="index.html" class="header__logo-box">
-        <img src="../assets/images/logo.svg" alt="Share Humanity Logo" class="header__logo">
+        <img src="" alt="Share Humanity Logo" class="header__logo">
     </a>
 
     <!-- Navigation -->
@@ -11,14 +11,14 @@
 
         <!-- Toggle Menu -->
         <input type="checkbox" id="nav-toggle" class="nav__toggle"/>
-        <label for="nav-toggle" class="nav__toggle-button" onclick="changeIcon(this)">
+        <label for="nav-toggle" class="nav__toggle-button icon-change">
             <svg class="nav__toggle-icon">
-                <use xlink:href="#sprite.svg#icon-menu"></use>
+                <!-- <use xlink:href="#sprite.svg#icon-menu"></use> -->
             </svg>
         </label>
 
         <!-- Button to close menu above page -->
-        <button class="nav__back-button" onclick="closeMenu(); changeIcon(this)">&nbsp;</button>           
+        <button class="nav__back-button icon-change" onclick="closeMenu();">&nbsp;</button>           
 
         <ul class="nav__list">
             <li class="nav__item"><a href="index.html" class="nav__link nav__link--active">Home</a></li>
@@ -35,7 +35,7 @@
 
         <!-- Toggle Searchbox -->
         <input type="checkbox" id="search-toggle" class="search__toggle"/>
-        <label for="search-toggle" class="search__toggle-button" onclick="changeIcon(this)">
+        <label for="search-toggle" class="search__toggle-button icon-change">
             <svg class="search__toggle-icon">
                 <use xlink:href="assets/images/sprite.svg#icon-search"></use>
             </svg>
@@ -45,7 +45,7 @@
             <input type="text" class="search__input" placeholder="Search">
             <button class="search__btn">
                 <svg class="search__icon">
-                    <use xlink:href="#sprite.svg#icon-search"></use>
+                    <!-- <use xlink:href="#sprite.svg#icon-search"></use> -->
                 </svg>
             </button>
         </div>
