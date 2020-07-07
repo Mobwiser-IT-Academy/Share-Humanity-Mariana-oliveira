@@ -64,7 +64,7 @@ export const issuesDetails = [
            `Only <strong>41%</strong> of women giving birth received maternity cash benefits.`
        ],
        areasMap: ` <a title="Max Roser / CC BY (https://creativecommons.org/licenses/by/4.0)"  href="https://commons.wikimedia.org/wiki/File:Share_of_population_living_in_multidimensional_poverty,_2014.svg" target="_blank">
-       <img class="areas__img" alt="Share of population living in multidimensional poverty, 2014" src="assets/images/poverty/1280px-Share_of_population_living_in_multidimensional_poverty,_2014.svg.png">
+       <img class="areas__img" alt="Share of population living in multidimensional poverty, 2014" src="assets/images/poverty/Population_living_in_poverty,_2014.svg.png">
        </a>`,
        areasCaption: ` <a class="inline-link" href="https://commons.wikimedia.org/wiki/File:Share_of_population_living_in_multidimensional_poverty,_2014.svg" target="_blank" title="via Wikimedia Commons">Max Roser</a> / <a class="inline-link" href="https://creativecommons.org/licenses/by/4.0" target="_blank">CC BY</a>`,
        events: [
