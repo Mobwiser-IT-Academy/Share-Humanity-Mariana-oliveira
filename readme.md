@@ -26,4 +26,8 @@ In the project root folder, please run the following command to start live previ
 
 In the project root folder,  please run the following command to build the app for production:
 
-        npm run build:css
+        npm run build
+
+Or run the following command to build and preview the website locally: 
+
+        npm run preview
