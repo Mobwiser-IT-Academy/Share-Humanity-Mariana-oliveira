@@ -1,5 +1,5 @@
 const path = require("path");
-const common = require("./webpack.dev");
+const common = require("./webpack.common");
 const merge = require("webpack-merge");
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -10,26 +10,15 @@ const TerserPlugin = require('terser-webpack-plugin')
 const buildPath =  path.resolve(__dirname, 'dist');
 
 
-module.exports =  {
+module.exports =  merge(common, {
 	mode: "production",
-	entry: {
-		index: "./src/page-index/index.js", 
-		issue: "./src/page-issue/issue.js",
-	},
 	output: {
 		filename: "[name].[contentHash].bundle.js",
 		path: buildPath,
 	},
 	module: {
-		rules: [
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: 'babel-loader',
-        		options: {
-          			presets: ['@babel/preset-env']
-        		}
-			}, 
+		rules: [			
+
 			{
 				test: /\.scss$/,
 				use: [
@@ -37,25 +26,7 @@ module.exports =  {
 					"css-loader", // 2. Turns css into commonjs
 					"sass-loader"   // 1. Turns sass into css
 				]
-			},
-			{
-				test:/\.(svg|png|jpg|gif)$/i,
-				use:{ 
-					loader: "file-loader",
-					options: {
-						name: "[name].[hash].[ext]",
-						outputPath: "./assets/images"
-					}
-				}
-			},
-			{
-				test: /\.html$/,
-				use: [
-					{
-						loader: 'html-loader',
-				  	}
-				] 
-			},
+			}
 		]
 	},	
 	plugins: [ 
@@ -101,4 +72,4 @@ module.exports =  {
 			new OptimizeCssAssetsPlugin({})
 		]
 	}
-};
+});

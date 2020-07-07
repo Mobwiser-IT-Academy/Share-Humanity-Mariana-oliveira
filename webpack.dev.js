@@ -1,24 +1,14 @@
 const path = require("path");
+const common = require("./webpack.common");
+const merge = require("webpack-merge");
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 
 
-module.exports = {
+module.exports =  merge(common, {
 	mode: "development",
-	entry: {
-		index: "./src/page-index/index.js", 
-		issue: "./src/page-issue/issue.js",
-	},
 	module: {
 		rules: [
-			{
-				test: /\.js$/,
-				exclude: /node_modules/,
-				loader: 'babel-loader',
-        		options: {
-          			presets: ['@babel/preset-env']
-        		}
-			}, 
 			{
 				test: /\.scss$/,
 				use: [
@@ -26,24 +16,6 @@ module.exports = {
 					"css-loader", // 2. Turns css into commonjs
 					"sass-loader"   // 1. Turns sass into css
 				]
-			},
-			{
-				test:/\.(svg|png|jpg|gif)$/i,
-				use:{ 
-					loader: "file-loader",
-					options: {
-						name: "[name].[hash].[ext]",
-						outputPath: "./assets/images"
-					}
-				}
-			},
-			{
-				test: /\.html$/,
-				use: [
-					{
-						loader: 'html-loader',
-				  	}
-				] 
 			}
 		]
 	},
@@ -73,4 +45,4 @@ module.exports = {
 			template_filename: ['index.html', 'issue.html']
 		})
 	],
-};
+});
