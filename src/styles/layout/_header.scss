@@ -52,6 +52,9 @@
     }
 
     &__input_box {
+        display: flex;
+        align-items: center;
+        
         @include responsive(tab-port) {
             display: none;
 
@@ -119,7 +122,7 @@
         
         height: 2rem;
         width: 2rem;
-        margin-top: -1rem;
+        margin-top: -5rem;
 
         fill: $color-grey-dark-3;
 
