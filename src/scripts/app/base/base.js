@@ -3,12 +3,11 @@ export const htmlElements = {
     navItems: document.querySelectorAll('.nav__item'),
 
     toggleMenu: document.getElementById('nav-toggle'),
-    toggleMenu: document.getElementById('nav-toggle'),
     navIconContainer: document.querySelector('.nav__toggle-icon'),
-    iconToggleMenu: document.querySelector(".nav__toggle-icon > use"),
+    navBackMenu: document.querySelector(".nav__back-button"),
+    searchToggle: document.querySelector(".search__toggle"),
     searchIconContainer: document.querySelector('.search__icon'),
     searchToggleIconContainer: document.querySelector('.search__toggle-icon'),
-    iconToggleSearch: document.querySelector(".search__toggle-icon > use"),
     iconChange: document.querySelectorAll('.icon-change'),
 
     headerLogo: document.querySelector('.header__logo'),

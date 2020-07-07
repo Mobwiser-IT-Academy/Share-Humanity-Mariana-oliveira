@@ -4,8 +4,8 @@ const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
 
 
 module.exports = {
+	mode: "development",
 	entry: {
-		main: "./src/scripts/index.js",
 		index: "./src/page-index/index.js", 
 		issue: "./src/page-issue/issue.js",
 	},
