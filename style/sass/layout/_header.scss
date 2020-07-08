@@ -1,0 +1,185 @@
+.header {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+
+    align-items: center;
+    
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+	width: calc(100vw - 2.5 *  var(--body-padding));
+    height: 10rem;
+
+    overflow: hidden;
+    background-color: $color-grey-light-1;
+
+    
+    &__logo-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @include responsive(tab-port) {
+            order: 1;
+            justify-self: center;
+        }
+    
+    }
+
+    &__logo{
+        width: 10rem;	  
+        
+    }
+
+
+    @include responsive(tab-port) {
+        grid-template-columns: repeat(3, 1fr);
+
+        width: 100vw; 
+    }
+}
+
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-left: auto;
+
+    @include responsive(tab-port) {
+        order: 2;
+        width: 33%;
+    }
+
+    &__input_box {
+        display: flex;
+        align-items: center;
+        
+        @include responsive(tab-port) {
+            display: none;
+
+            position: fixed;
+            top: 10rem;
+            right: 0;
+            height: 7rem;
+            width: 50%;
+            padding-right: 2rem;
+            z-index: 800;
+            transition: all 1s;
+
+            background-color: $color-grey-light-1;
+
+            animation-name: moveInTop;
+            animation-duration: .8s;
+            animation-timing-function: ease-out;
+        }
+
+        @include responsive(phone) {
+            width: 100%;
+        }
+    }
+
+    &__input{
+        font-family: inherit;
+        font-size: inherit;
+        background-color: $color-grey-light-2;
+        color: currentColor;
+        border: none;
+        border-radius: 10rem;
+        width:95%;
+        padding: .7rem 3.5rem .7rem 1rem;
+        margin-right: -5rem;
+        margin-top: -1rem;
+        transition: all .2s;
+       
+    
+        &:focus {
+            outline: none;
+            background-color: rgba($color-grey-light-4,.4);
+            border: none;
+        }
+    }
+
+    &__input:focus + &__btn {
+        background-color: transparent;
+    }
+
+
+    &__btn {
+        border: none;
+        background-color: $color-grey-light-2;
+        transition: all .2s;
+    
+        &:active {
+            transform: translateY(2px);
+        }
+    
+    }   
+
+    
+
+    &__icon {
+        
+        height: 2rem;
+        width: 2rem;
+        margin-top: -5rem;
+
+        fill: $color-grey-dark-3;
+
+    }
+
+
+
+    //Functionality for smaller screens (<900px)
+    //For smaller screens (<900px)
+
+    &__toggle {
+        visibility: hidden;
+        position: absolute;
+        top: 3.5rem;
+        right: 5rem;
+        
+
+        @include responsive(tab-port) {
+            right: 3rem;
+        }
+
+        @include responsive(phone) {
+            visibility: visible;
+            opacity: 0;
+        }
+    }
+
+    &__toggle:checked ~ &__input_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+
+    &__toggle-button {
+        position: absolute;
+        top: 3.5rem;
+        right: 5rem;
+        visibility: hidden;
+        width: min-content;   
+        
+        
+        @include responsive(tab-port) {
+            visibility: visible;
+        }
+ 
+        @include responsive(tab-port) {
+            right: 3rem;
+        }
+
+    }
+
+    &__toggle-icon {
+        height: 3rem;
+        width: 3rem;
+        fill: $color-primary-light;
+    
+    }
+}

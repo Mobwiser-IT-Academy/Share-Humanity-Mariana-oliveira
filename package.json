@@ -4,10 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+<<<<<<< HEAD
     "start": "webpack-dev-server --config webpack.dev.js --open",
     "build": "webpack --config webpack.prod.js",
     "preview": "npm run build && http-server dist",
     "deploy": "gh-pages -d dist"
+=======
+    "watch:sass": "nodemon -e scss -x \"npm run compiledev:sass\"",
+    "compiledev:sass": "node-sass style/sass/main.scss style/css/main.css",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass",
+    "compile:sass": "node-sass style/sass/main.scss style/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b \"last 10 versions\" style/css/style.comp.css -o style/css/style.prefix.css",
+    "compress:css": "node-sass style/css/style.prefix.css style/css/main.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css"
+>>>>>>> 498e6c8fb78111a7427af8d3b1592ebbce3adf5f
   },
   "repository": {
     "type": "git",
