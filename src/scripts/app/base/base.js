@@ -15,6 +15,8 @@ export const htmlElements = {
     facebookIconContainer: document.querySelector('.footer__icon-facebook'),
     instagramIconContainer: document.querySelector('.footer__icon-instagram'),
     twitterIconContainer: document.querySelector('.footer__icon-twitter'),
+
+    issuesList: document.querySelector('.issues'),
 }
 
 

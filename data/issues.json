@@ -1,0 +1,50 @@
+[
+    {
+        "title": "Poverty",
+        "img": "../assets/images/poverty/patrick-hendry-LL9wzvCI2gw-unsplash-1920.jpg",
+        "imgAlt": "A clearly needy elderly person",
+        "peopleAffected": "700 M", 
+        "priorityRank": "1",
+        "link": "poverty"
+    }, 
+    {
+        "title": "Hunger",
+        "img": "../assets/images/hunger/muhammad-muzamil-7S9x9US26Ow-unsplash-1920.jpg",
+        "imgAlt": "Little boy with an empty pan",
+        "peopleAffected": "820 M", 
+        "priorityRank": "2",
+        "link": "hunger"
+    }, 
+    {
+        "title": "Health",
+        "img": " ../assets/images/health/tedward-quinn-qN5ZqBoIWKo-unsplash-1920.jpg",
+        "imgAlt": "A person using protective equipment to disinfect the space",
+        "peopleAffected": "820 M", 
+        "priorityRank": "3",
+        "link": "health"
+    }, 
+    {
+        "title": "Education",
+        "img": "../assets/images/education/nate-greno-p6Fu1MuBOdg-unsplash-1920.jpg",
+        "imgAlt": "Little boy hugging a book",
+        "peopleAffected": "60 M", 
+        "priorityRank": "4",
+        "link": "education"
+    }, 
+    {
+        "title": "Water and Sanitation",
+        "img": "../assets/images/water-sanitation/ivan-bandura-6wSevhW1Dzc-unsplash-1920.jpg",
+        "imgAlt": "Effluent treatment plant",
+        "peopleAffected": "2000 M", 
+        "priorityRank": "6",
+        "link": "water"
+    }, 
+    {
+        "title": "Climate Change",
+        "img": "../assets/images/climate-change/annie-spratt-d8FjB1_8xHQ-unsplash-1920.jpg",
+        "imgAlt": "Melting glaciers",
+        "peopleAffected": "Everyone", 
+        "priorityRank": "7",
+        "link": "climate-change"
+    }    
+]
